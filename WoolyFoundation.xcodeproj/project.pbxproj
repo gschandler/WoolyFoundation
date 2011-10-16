@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CBA6DD41324098E0052CED7 /* Foundation+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCB1324098E0052CED7 /* Foundation+Extensions.h */; };
+		4CBA6DD51324098E0052CED7 /* NSArray+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCC1324098E0052CED7 /* NSArray+Extensions.h */; };
+		4CBA6DD61324098E0052CED7 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DCD1324098E0052CED7 /* NSArray+Extensions.m */; };
+		4CBA6DD71324098E0052CED7 /* NSBundle+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCE1324098E0052CED7 /* NSBundle+Extensions.h */; };
+		4CBA6DD81324098E0052CED7 /* NSBundle+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DCF1324098E0052CED7 /* NSBundle+Extensions.m */; };
+		4CBA6DD91324098E0052CED7 /* NSString+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DD01324098E0052CED7 /* NSString+Extensions.h */; };
+		4CBA6DDA1324098E0052CED7 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD11324098E0052CED7 /* NSString+Extensions.m */; };
+		4CBA6DDB1324098E0052CED7 /* NSDate+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DD21324098E0052CED7 /* NSDate+Extensions.h */; };
+		4CBA6DDC1324098E0052CED7 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD31324098E0052CED7 /* NSDate+Extensions.m */; };
+		4CBA6E9113240BAB0052CED7 /* WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6E9013240BAB0052CED7 /* WoolyFoundation.h */; };
+		4CD513FC134D090E004E466E /* NSString+Extensions-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD513FB134D090E004E466E /* NSString+Extensions-Tests.m */; };
+		4CD5140D134D0A2B004E466E /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD11324098E0052CED7 /* NSString+Extensions.m */; };
+		4CD5143E134D2707004E466E /* NSDate+Extensions-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5143D134D2707004E466E /* NSDate+Extensions-Tests.m */; };
+		AA747D9F0F9514B9006C5449 /* WoolyFoundation_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* WoolyFoundation_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4CBA6DCB1324098E0052CED7 /* Foundation+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Extensions.h"; sourceTree = "<group>"; };
+		4CBA6DCC1324098E0052CED7 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
+		4CBA6DCD1324098E0052CED7 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
+		4CBA6DCE1324098E0052CED7 /* NSBundle+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Extensions.h"; sourceTree = "<group>"; };
+		4CBA6DCF1324098E0052CED7 /* NSBundle+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Extensions.m"; sourceTree = "<group>"; };
+		4CBA6DD01324098E0052CED7 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		4CBA6DD11324098E0052CED7 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		4CBA6DD21324098E0052CED7 /* NSDate+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
+		4CBA6DD31324098E0052CED7 /* NSDate+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
+		4CBA6E9013240BAB0052CED7 /* WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoolyFoundation.h; sourceTree = "<group>"; };
+		4CD513F3134D08BE004E466E /* WoolyFoundationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoolyFoundationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WoolyFoundationTests-Info.plist"; sourceTree = "<group>"; };
+		4CD513FB134D090E004E466E /* NSString+Extensions-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions-Tests.m"; sourceTree = "<group>"; };
+		4CD5143D134D2707004E466E /* NSDate+Extensions-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions-Tests.m"; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* WoolyFoundation_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoolyFoundation_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libWoolyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWoolyFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CD513F0134D08BE004E466E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libWoolyFoundation.a */,
+				4CD513F3134D08BE004E466E /* WoolyFoundationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* WoolyFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				4CD513F9134D08C9004E466E /* Tests */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */,
+			);
+			name = WoolyFoundation;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4CBA6DCB1324098E0052CED7 /* Foundation+Extensions.h */,
+				4CBA6DCC1324098E0052CED7 /* NSArray+Extensions.h */,
+				4CBA6DCD1324098E0052CED7 /* NSArray+Extensions.m */,
+				4CBA6DCE1324098E0052CED7 /* NSBundle+Extensions.h */,
+				4CBA6DCF1324098E0052CED7 /* NSBundle+Extensions.m */,
+				4CBA6DD01324098E0052CED7 /* NSString+Extensions.h */,
+				4CBA6DD11324098E0052CED7 /* NSString+Extensions.m */,
+				4CBA6DD21324098E0052CED7 /* NSDate+Extensions.h */,
+				4CBA6DD31324098E0052CED7 /* NSDate+Extensions.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* WoolyFoundation_Prefix.pch */,
+				4CBA6E9013240BAB0052CED7 /* WoolyFoundation.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4CD513F9134D08C9004E466E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4CD513FB134D090E004E466E /* NSString+Extensions-Tests.m */,
+				4CD5143D134D2707004E466E /* NSDate+Extensions-Tests.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* WoolyFoundation_Prefix.pch in Headers */,
+				4CBA6DD41324098E0052CED7 /* Foundation+Extensions.h in Headers */,
+				4CBA6DD51324098E0052CED7 /* NSArray+Extensions.h in Headers */,
+				4CBA6DD71324098E0052CED7 /* NSBundle+Extensions.h in Headers */,
+				4CBA6DD91324098E0052CED7 /* NSString+Extensions.h in Headers */,
+				4CBA6DDB1324098E0052CED7 /* NSDate+Extensions.h in Headers */,
+				4CBA6E9113240BAB0052CED7 /* WoolyFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4CD513F2134D08BE004E466E /* WoolyFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD513F7134D08BE004E466E /* Build configuration list for PBXNativeTarget "WoolyFoundationTests" */;
+			buildPhases = (
+				4CD513EE134D08BE004E466E /* Resources */,
+				4CD513EF134D08BE004E466E /* Sources */,
+				4CD513F0134D08BE004E466E /* Frameworks */,
+				4CD513F1134D08BE004E466E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WoolyFoundationTests;
+			productName = WoolyFoundationTests;
+			productReference = 4CD513F3134D08BE004E466E /* WoolyFoundationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D2AAC07D0554694100DB518D /* WoolyFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "WoolyFoundation" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WoolyFoundation;
+			productName = WoolyFoundation;
+			productReference = D2AAC07E0554694100DB518D /* libWoolyFoundation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "WoolyFoundation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* WoolyFoundation */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* WoolyFoundation */,
+				4CD513F2134D08BE004E466E /* WoolyFoundationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CD513EE134D08BE004E466E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CD513F1134D08BE004E466E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CD513EF134D08BE004E466E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD513FC134D090E004E466E /* NSString+Extensions-Tests.m in Sources */,
+				4CD5140D134D0A2B004E466E /* NSString+Extensions.m in Sources */,
+				4CD5143E134D2707004E466E /* NSDate+Extensions-Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBA6DD61324098E0052CED7 /* NSArray+Extensions.m in Sources */,
+				4CBA6DD81324098E0052CED7 /* NSBundle+Extensions.m in Sources */,
+				4CBA6DDA1324098E0052CED7 /* NSString+Extensions.m in Sources */,
+				4CBA6DDC1324098E0052CED7 /* NSDate+Extensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/WoolyFoundation.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WoolyFoundation_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = WoolyFoundation;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ..;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/WoolyFoundation.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WoolyFoundation_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = WoolyFoundation;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ..;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		4CD513F5134D08BE004E466E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "WoolyFoundationTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PRODUCT_NAME = WoolyFoundationTests;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4CD513F6134D08BE004E466E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "WoolyFoundationTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PRODUCT_NAME = WoolyFoundationTests;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "WoolyFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "WoolyFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD513F7134D08BE004E466E /* Build configuration list for PBXNativeTarget "WoolyFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD513F5134D08BE004E466E /* Debug */,
+				4CD513F6134D08BE004E466E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
