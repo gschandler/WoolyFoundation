@@ -15,12 +15,24 @@
 
 - (NSDate *)hourLater;
 - (NSDate *)hourEarlier;
+- (NSDate *)thisHour;		// start of hour
+- (NSDate *)previousHour;
+- (NSDate *)nextHour;
+
 - (NSDate *)dayLater;
 - (NSDate *)dayEarlier;
+- (NSDate *)thisDay;		// start of day
+- (NSDate *)previousDay;
+- (NSDate *)nextDay;
+
 - (NSDate *)weekLater;
 - (NSDate *)weekEarlier;
+- (NSDate *)thisWeek;		// start of week
+- (NSDate *)previousWeek;
+- (NSDate *)nextWeek;
 
 - (NSDate *)beginningOfDay;
+- (NSDate *)endOfDay;
 
 // yesterday
 + (NSDate *)yesterday;		// midnight yesterday

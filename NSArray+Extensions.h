@@ -1,6 +1,6 @@
 //
 //  NSArray+Extensions.h
-//  Gigbook
+//  WoolyFoundation
 //
 //  Created by Scott Chandler on 4/26/10.
 //  Copyright 2010 Wooly Beast Software, LLC. All rights reserved.
@@ -11,7 +11,6 @@
 
 @interface NSArray(WoolyBeast)
 - (id)firstObject;
-
 @end
 
 @interface NSMutableArray(WoolyBeast)

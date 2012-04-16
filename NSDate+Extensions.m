@@ -8,11 +8,6 @@
 
 #import "NSDate+Extensions.h"
 
-//#define k1MinuteInSeconds   (60)
-//#define	k1HourInSeconds		(k1MinuteInSeconds * 60)
-//#define	k1DayInSeconds      (k1HourInSeconds * 24)
-//#define k1WeekInSeconds     (k1DayInSeconds * 7)
-
 @implementation NSDate (WoolyBeast)
 +(NSDate *)yesterday
 {
@@ -109,6 +104,23 @@
 	return date;
 }
 
+- (NSDate *)thisHour
+{
+	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSHourCalendarUnit+NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
+	return [[NSCalendar currentCalendar] dateFromComponents:components];
+	
+}
+
+- (NSDate *)previousHour
+{
+	return [[self thisHour] hourEarlier];
+}
+
+- (NSDate *)nextHour
+{
+	return [[self thisHour] hourLater];
+}
+
 - (NSDate *)dayLater
 {
 	NSDateComponents *offset = [[NSDateComponents alloc] init];
@@ -125,6 +137,23 @@
 	NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
 	return date;
+}
+
+- (NSDate *)thisDay
+{
+	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
+	return [[NSCalendar currentCalendar] dateFromComponents:components];
+	
+}
+
+- (NSDate *)previousDay
+{
+	return [[self thisDay] dayEarlier];
+}
+
+- (NSDate *)nextDay
+{
+	return [[self thisDay] dayLater];
 }
 
 - (NSDate *)weekLater
@@ -145,6 +174,23 @@
 	return date;
 }
 
+- (NSDate *)thisWeek
+{
+	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
+	return [[NSCalendar currentCalendar] dateFromComponents:components];
+	
+}
+
+- (NSDate *)previousWeek
+{
+	return [[self thisWeek] weekEarlier];
+}
+
+- (NSDate *)nextWeek
+{
+	return [[self thisWeek] weekLater];
+}
+
 - (NSDate *)beginningOfDay
 {
 	NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -155,6 +201,18 @@
 	NSDate *date = [calendar dateFromComponents:components];
 	return date;
 }
+
+- (NSDate *)endOfDay
+{
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSDateComponents *components = [calendar components:NSEraCalendarUnit+NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:self];
+	[components setHour:11];
+	[components setMinute:59];
+	[components setSecond:59];
+	NSDate *date = [calendar dateFromComponents:components];
+	return date;
+}
+
 
 - (BOOL)isBeforeDate:(NSDate *)date
 {

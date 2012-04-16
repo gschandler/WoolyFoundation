@@ -10,13 +10,10 @@
 #import <objc/message.h>
 
 @implementation NSArray(WoolyBeast)
-
 - (id)firstObject
 {
-	if ( self.count > 0 ) 
-		return [self objectAtIndex:0];
-	else
-		return nil;
+	id object = (self.count > 0) ? [self objectAtIndex:0] : nil;
+	return object;
 }
 @end
 
@@ -46,7 +43,7 @@
 - (void)addObject:(id)object sortedUsingFunction:(NSInteger (*)(id, id, void *))comparator context:(void *)context
 {
 	if ( comparator ) {
-		NSInteger left = 0, right = [self count]-1, index = (right-left)/2;
+		NSInteger left = 0, right = [self count]-1, index = right/2;
 		IMP objectAtIndexImp = [self methodForSelector:@selector(objectAtIndex:)];
 		while ( left <= right ) {
 			id other = objectAtIndexImp(self,@selector(objectAtIndex:),index);
@@ -87,7 +84,7 @@ static NSInteger SelectorComparator( id obj1, id obj2, void *context )
 	if ( descriptors != nil && descriptors.count > 0 ) {
 		NSEnumerator *cursor = [descriptors objectEnumerator];
 		NSSortDescriptor *descriptor = [cursor nextObject];
-		NSInteger left = 0, right = [self count]-1, index = (right-left)/2;
+		NSInteger left = 0, right = [self count]-1, index = right/2;
 		IMP objectAtIndexImp = [self methodForSelector:@selector(objectAtIndex:)];
 		IMP	compareObjectToObjectImp = [descriptor methodForSelector:@selector(compareObject:toObject:)];
 		while (descriptor && left <= right ) {
