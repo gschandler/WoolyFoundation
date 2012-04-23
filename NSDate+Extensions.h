@@ -35,17 +35,17 @@
 - (NSDate *)endOfDay;
 
 // yesterday
-+ (NSDate *)yesterday;		// midnight yesterday
++ (NSDate *)yesterday;		// 00:00:00 yesterday
 - (BOOL)isYesterday;
 
 // today
-+ (NSDate *)today;			// midnight today
++ (NSDate *)today;			// 00:00:00 today
 - (BOOL)isBeforeToday;
 - (BOOL)isToday;
 - (BOOL)isAfterToday;
 
 // tomorrow
-+ (NSDate *)tomorrow;		// midnight tomorrow
++ (NSDate *)tomorrow;		// 00:00:00 tomorrow
 - (BOOL)isTomorrow;
 
 - (BOOL)isSameDayAsDate:(NSDate *)date;

@@ -17,7 +17,7 @@
 
 +(NSDate *)today
 {
-	NSCalendar *currentCalendar = [NSCalendar currentCalendar];
+	NSCalendar *currentCalendar = [NSCalendar autoupdatingCurrentCalendar];
 	NSDateComponents *components = [currentCalendar components:NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:[NSDate date]];
 	NSDate *today = [currentCalendar dateFromComponents:components];
 	return today;
@@ -34,7 +34,7 @@
 	NSDate *today = [NSDate today];
 	NSDateComponents *offset = [[NSDateComponents alloc] init];
 	offset.day = days;
-	NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:today options:0];
+	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:today options:0];
 	[offset release];
 	return date;
 }
@@ -70,7 +70,7 @@
 {
 	if ( date == nil ) return NO;
 	
-	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
 	NSDateComponents *components = [calendar components:NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:date];
 	NSDate *startOfDay = [calendar dateFromComponents:components];
 	BOOL today = [self laterDate:startOfDay] == self;
@@ -78,7 +78,7 @@
 		NSDateComponents *offset = [[NSDateComponents alloc] init];
 		offset.day = 1;
 		offset.second = -1;
-		NSDate *endOfDay = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:startOfDay options:0];
+		NSDate *endOfDay = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:startOfDay options:0];
 		[offset release];
 		today &= [self earlierDate:endOfDay] == self;
 	}
@@ -90,7 +90,7 @@
 {
 	NSDateComponents *offset = [[NSDateComponents alloc] init];
 	offset.hour = 1;
-	NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
 	return date;
 }
@@ -99,15 +99,15 @@
 {
 	NSDateComponents *offset = [[NSDateComponents alloc] init];
 	offset.hour = -1;
-	NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
 	return date;
 }
 
 - (NSDate *)thisHour
 {
-	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSHourCalendarUnit+NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
-	return [[NSCalendar currentCalendar] dateFromComponents:components];
+	NSDateComponents *components = [[NSCalendar autoupdatingCurrentCalendar] components:NSHourCalendarUnit+NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
+	return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
 	
 }
 
@@ -125,7 +125,7 @@
 {
 	NSDateComponents *offset = [[NSDateComponents alloc] init];
 	offset.day = 1;
-	NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
 	return date;
 }
@@ -134,15 +134,15 @@
 {
 	NSDateComponents *offset = [[NSDateComponents alloc] init];
 	offset.day = -1;
-	NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
 	return date;
 }
 
 - (NSDate *)thisDay
 {
-	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
-	return [[NSCalendar currentCalendar] dateFromComponents:components];
+	NSDateComponents *components = [[NSCalendar autoupdatingCurrentCalendar] components:NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
+	return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
 	
 }
 
@@ -160,7 +160,7 @@
 {
 	NSDateComponents *offset = [[NSDateComponents alloc] init];
 	offset.week = 1;
-	NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
 	return date;
 }
@@ -169,15 +169,15 @@
 {
 	NSDateComponents *offset = [[NSDateComponents alloc] init];
 	offset.week = -1;
-	NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
 	return date;
 }
 
 - (NSDate *)thisWeek
 {
-	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
-	return [[NSCalendar currentCalendar] dateFromComponents:components];
+	NSDateComponents *components = [[NSCalendar autoupdatingCurrentCalendar] components:NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
+	return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
 	
 }
 
@@ -193,7 +193,7 @@
 
 - (NSDate *)beginningOfDay
 {
-	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
 	NSDateComponents *components = [calendar components:NSEraCalendarUnit+NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:self];
 	[components setHour:0];
 	[components setMinute:0];
@@ -204,7 +204,7 @@
 
 - (NSDate *)endOfDay
 {
-	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
 	NSDateComponents *components = [calendar components:NSEraCalendarUnit+NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:self];
 	[components setHour:11];
 	[components setMinute:59];
