@@ -110,4 +110,11 @@ static NSInteger SelectorComparator( id obj1, id obj2, void *context )
 	}
 }
 
+- (void)removeFirstObject
+{
+    if ( self.count > 0 ) {
+        [self removeObjectAtIndex:0];
+    }
+}
+
 @end

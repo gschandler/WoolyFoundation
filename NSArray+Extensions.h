@@ -22,4 +22,5 @@
 - (void)addObject:(id)object sortedUsingSelector:(SEL)selector;
 - (void)addObject:(id)object sortedUsingDescriptors:(NSArray *)descriptors;
 
+- (void)removeFirstObject;
 @end
