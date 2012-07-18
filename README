@@ -1,0 +1,10 @@
+WoolyFoundation
+
+WoolyFoundation is a set of frequently called upon helper classes and class extensions used in Wooly Beast Software products. The project builds as an iOS static library to be included in other project files. 
+
+To Use:
+* In your project, add the WoolyFoundation.xcodeproj to your list of project files.  
+* Add '#import "WoolyFoundation.h"' to the project prefix file.
+* Depending on where WoolyFoundation is located, the User Header Search Paths build setting may need to be update to point to the directory.
+* Update Other Linker Flags with '-all_load' in order to work around a bug in Apple's linkers with using static libraries that composed of categories. This may be fixed in future releases of Apple's developer tools: http://developer.apple.com/library/mac/#qa/qa1490/_index.html
+* Update the Target Dependencies in each target Build Phase to be dependent upon the library.
