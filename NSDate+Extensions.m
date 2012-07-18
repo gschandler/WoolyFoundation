@@ -32,7 +32,7 @@
 +(NSDate *)dateDaysFromToday:(NSInteger)days
 {
 	NSDate *today = [NSDate today];
-	NSDateComponents *offset = [[NSDateComponents alloc] init];
+	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = days;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:today options:0];
 	[offset release];
@@ -75,7 +75,7 @@
 	NSDate *startOfDay = [calendar dateFromComponents:components];
 	BOOL today = [self laterDate:startOfDay] == self;
 	if ( today ) {
-		NSDateComponents *offset = [[NSDateComponents alloc] init];
+		NSDateComponents *offset = [NSDateComponents new];
 		offset.day = 1;
 		offset.second = -1;
 		NSDate *endOfDay = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:startOfDay options:0];
@@ -88,7 +88,7 @@
 
 - (NSDate *)hourLater
 {
-	NSDateComponents *offset = [[NSDateComponents alloc] init];
+	NSDateComponents *offset = [NSDateComponents new];
 	offset.hour = 1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
@@ -97,7 +97,7 @@
 
 - (NSDate *)hourEarlier
 {
-	NSDateComponents *offset = [[NSDateComponents alloc] init];
+	NSDateComponents *offset = [NSDateComponents new];
 	offset.hour = -1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
@@ -123,7 +123,7 @@
 
 - (NSDate *)dayLater
 {
-	NSDateComponents *offset = [[NSDateComponents alloc] init];
+	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = 1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
@@ -132,7 +132,7 @@
 
 - (NSDate *)dayEarlier
 {
-	NSDateComponents *offset = [[NSDateComponents alloc] init];
+	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = -1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
@@ -158,7 +158,7 @@
 
 - (NSDate *)weekLater
 {
-	NSDateComponents *offset = [[NSDateComponents alloc] init];
+	NSDateComponents *offset = [NSDateComponents new];
 	offset.week = 1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
@@ -167,7 +167,7 @@
 
 - (NSDate *)weekEarlier
 {
-	NSDateComponents *offset = [[NSDateComponents alloc] init];
+	NSDateComponents *offset = [NSDateComponents new];
 	offset.week = -1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
 	[offset release];
