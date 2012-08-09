@@ -8,8 +8,8 @@
 
 #import "NSBundle+Extensions.h"
 
-static NSString *	kCFBundleShortVersionString = @"CFBundleShortVersionString";
-static NSString *	kCFBundleGetInfoString = @"CFBundleGetInfoString";
+static NSString * const	kCFBundleShortVersionString = @"CFBundleShortVersionString";
+static NSString * const	kCFBundleGetInfoString = @"CFBundleGetInfoString";
 
 @implementation NSBundle(WoolyBeast)
 - (NSString *)shortVersionString
