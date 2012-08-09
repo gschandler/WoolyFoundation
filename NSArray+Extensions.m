@@ -22,27 +22,36 @@
 @implementation NSMutableArray(WoolyBeast)
 - (void)insertObject:(id)object afterObject:(id)other
 {
-	NSAssert(object,@"Invalid nil parameter 1");
-	NSAssert(other,@"Invalid nil parameter 2");
-	NSInteger index = [self indexOfObject:other];
-	if ( index != NSNotFound ) {
-		[self insertObject:object atIndex:index+1];
+	NSParameterAssert(object);
+	NSParameterAssert(other);
+
+	if ( other && object ) {
+		NSInteger index = [self indexOfObject:other];
+		if ( index != NSNotFound ) {
+			[self insertObject:object atIndex:index+1];
+		}
 	}
 }
 
 - (void)insertObject:(id)object beforeObject:(id)other
 {
-	NSAssert(object,@"Invalid nil parameter 1");
-	NSAssert(other,@"Invalid nil parameter 2");
-	NSInteger index = [self indexOfObject:other];
-	if ( index != NSNotFound ) {
-		[self insertObject:object atIndex:index];
+	NSParameterAssert(object);
+	NSParameterAssert(other);
+	
+	if ( object && other ) {
+		NSInteger index = [self indexOfObject:other];
+		if ( index != NSNotFound ) {
+			[self insertObject:object atIndex:index];
+		}
 	}
 }
 
 - (void)addObject:(id)object sortedUsingFunction:(NSInteger (*)(id, id, void *))comparator context:(void *)context
 {
-	if ( comparator ) {
+	NSParameterAssert(object);
+	NSParameterAssert(comparator);
+	
+	if ( object && comparator ) {
 		NSInteger left = 0, right = [self count]-1, index = right/2;
 		IMP objectAtIndexImp = [self methodForSelector:@selector(objectAtIndex:)];
 		while ( left <= right ) {
@@ -74,19 +83,27 @@ static NSInteger SelectorComparator( id obj1, id obj2, void *context )
 
 -(void)addObject:(id)object sortedUsingSelector:(SEL)selector
 {
-	if ( selector ) {
+	NSParameterAssert(object);
+	NSParameterAssert(selector);
+	
+	if ( object && selector ) {
 		[self addObject:object sortedUsingFunction:&SelectorComparator context:selector];
 	}
 }
 
 - (void)addObject:(id)object sortedUsingDescriptors:(NSArray *)descriptors;
 {
-	if ( descriptors != nil && descriptors.count > 0 ) {
+	NSParameterAssert(object);
+	NSParameterAssert(descriptors);
+	
+	if ( object && descriptors && descriptors.count > 0 ) {
 		NSEnumerator *cursor = [descriptors objectEnumerator];
 		NSSortDescriptor *descriptor = [cursor nextObject];
 		NSInteger left = 0, right = [self count]-1, index = right/2;
+		
 		IMP objectAtIndexImp = [self methodForSelector:@selector(objectAtIndex:)];
 		IMP	compareObjectToObjectImp = [descriptor methodForSelector:@selector(compareObject:toObject:)];
+
 		while (descriptor && left <= right ) {
 			id other = objectAtIndexImp(self,@selector(objectAtIndex:),index);
 			NSComparisonResult result = (NSComparisonResult)compareObjectToObjectImp(descriptor,@selector(compareObject:toObject:),object,other);//  [descriptor compareObject:object toObject:other];
