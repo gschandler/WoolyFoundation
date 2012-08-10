@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSNumber (WoolyBeast)
+@interface NSNumber (WoolyFoundation)
 + (NSNumber *)numberWithBoolYES;
 + (NSNumber *)numberWithBoolNO;
 @end

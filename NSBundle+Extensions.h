@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSBundle(WoolyBeast)
+@interface NSBundle(WoolyFoundation)
 - (NSString *)shortVersionString;
 - (NSString *)bundleVersionString;
 - (NSString *)getInfoString;

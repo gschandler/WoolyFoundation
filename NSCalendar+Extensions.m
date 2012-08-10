@@ -8,12 +8,12 @@
 
 #import "NSCalendar+Extensions.h"
 
-@implementation NSCalendar (WoolyBeast)
+@implementation NSCalendar (WoolyFoundation)
 
 @end
 
 
-@implementation NSDateComponents (WoolyBeast)
+@implementation NSDateComponents (WoolyFoundation)
 
 - (void)setValue:(NSInteger)value forCalendarUnit:(NSCalendarUnit)unit
 {

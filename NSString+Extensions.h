@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSString(WoolyBeast)
+@interface NSString(WoolyFoundation)
 
 - (unichar)firstCharacter;
 - (NSString *)substringWithFirstCharacter;

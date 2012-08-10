@@ -9,7 +9,7 @@
 #import "NSString+Extensions.h"
 
 
-@implementation NSString(WoolyBeast)
+@implementation NSString(WoolyFoundation)
 
 - (unichar)firstCharacter
 {

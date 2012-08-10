@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSDate (WoolyBeast)
+@interface NSDate (WoolyFoundation)
 
 + (NSDate *)dateDaysFromToday:(NSInteger)days;
 

@@ -8,7 +8,7 @@
 
 #import "NSValue+Extensions.h"
 
-@implementation NSNumber (WoolyBeast)
+@implementation NSNumber (WoolyFoundation)
 + (NSNumber *)numberWithBoolYES
 {
 	return [NSNumber numberWithBool:YES];

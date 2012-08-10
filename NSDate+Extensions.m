@@ -8,7 +8,7 @@
 
 #import "NSDate+Extensions.h"
 
-@implementation NSDate (WoolyBeast)
+@implementation NSDate (WoolyFoundation)
 +(NSDate *)yesterday
 {
 	NSDate *yesterday = [[NSDate today] dayEarlier];

@@ -11,7 +11,7 @@
 static NSString * const	kCFBundleShortVersionString = @"CFBundleShortVersionString";
 static NSString * const	kCFBundleGetInfoString = @"CFBundleGetInfoString";
 
-@implementation NSBundle(WoolyBeast)
+@implementation NSBundle(WoolyFoundation)
 - (NSString *)shortVersionString
 {
 	return [self objectForInfoDictionaryKey:kCFBundleShortVersionString];

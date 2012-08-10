@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSCalendar (WoolyBeast)
+@interface NSCalendar (WoolyFoundation)
 @end
 
-@interface NSDateComponents (WoolyBeast)
+@interface NSDateComponents (WoolyFoundation)
 - (void)setValue:(NSInteger)value forCalendarUnit:(NSCalendarUnit)unit;
 @end

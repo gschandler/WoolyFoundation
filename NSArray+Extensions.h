@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSArray(WoolyBeast)
+@interface NSArray(WoolyFoundation)
+@property (nonatomic,readonly,getter = isEmpty) BOOL empty;
 - (id)firstObject;
 @end
 
-@interface NSMutableArray(WoolyBeast)
+@interface NSMutableArray(WoolyFoundation)
 - (void)insertObject:(id)object afterObject:(id)other;
 - (void)insertObject:(id)object beforeObject:(id)other;
 

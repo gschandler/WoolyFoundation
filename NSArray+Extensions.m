@@ -9,17 +9,23 @@
 #import "NSArray+Extensions.h"
 #import <objc/message.h>
 
-@implementation NSArray(WoolyBeast)
+@implementation NSArray(WoolyFoundation)
 - (id)firstObject
 {
 	id object = (self.count > 0) ? [self objectAtIndex:0] : nil;
 	return object;
 }
+
+- (BOOL)isEmpty
+{
+	return self.count == 0;
+}
+
 @end
 
 
 
-@implementation NSMutableArray(WoolyBeast)
+@implementation NSMutableArray(WoolyFoundation)
 - (void)insertObject:(id)object afterObject:(id)other
 {
 	NSParameterAssert(object);
