@@ -26,10 +26,23 @@
 
 
 @implementation NSMutableArray(WoolyFoundation)
+- (void)prependObject:(id)object
+{
+	NSParameterAssert(object);
+	[self insertObject:object atIndex:0];
+}
+
+- (void)appendObject:(id)object
+{
+	NSParameterAssert(object);
+	[self addObject:object];
+}
+
 - (void)insertObject:(id)object afterObject:(id)other
 {
 	NSParameterAssert(object);
 	NSParameterAssert(other);
+	NSParameterAssert([self containsObject:other]);
 
 	if ( other && object ) {
 		NSInteger index = [self indexOfObject:other];
@@ -43,6 +56,7 @@
 {
 	NSParameterAssert(object);
 	NSParameterAssert(other);
+	NSParameterAssert([self containsObject:other]);
 	
 	if ( object && other ) {
 		NSInteger index = [self indexOfObject:other];

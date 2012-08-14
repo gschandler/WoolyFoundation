@@ -15,6 +15,12 @@
 @end
 
 @interface NSMutableArray(WoolyFoundation)
+
+// quick add methods
+- (void)prependObject:(id)object;
+- (void)appendObject:(id)object;
+
+// if other object is not in array, object is not inserted into the list
 - (void)insertObject:(id)object afterObject:(id)other;
 - (void)insertObject:(id)object beforeObject:(id)other;
 
