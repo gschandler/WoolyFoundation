@@ -9,6 +9,10 @@
 #import "NSDictionary+WoolyFoundation.h"
 
 @implementation NSDictionary (WoolyFoundation)
+- (BOOL)containsKey:(id)key
+{
+	return [self objectForKey:key] != nil;
+}
 
 @end
 

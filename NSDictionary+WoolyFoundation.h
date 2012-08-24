@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (WoolyFoundation)
-
+- (BOOL)containsKey:(id)key;
 @end
 
 
