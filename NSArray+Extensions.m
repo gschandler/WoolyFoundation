@@ -21,6 +21,32 @@
 	return self.count == 0;
 }
 
+- (id)nextObject:(id)object
+{
+	id newObject = nil;
+	if ( object != nil ) {
+
+		NSInteger index = [self indexOfObject:object];
+		if ( index != NSNotFound && ++index < [self count] ) {
+			newObject = [self objectAtIndex:index];
+		}
+	}
+	return newObject;
+}
+
+- (id)previousObject:(id)object
+{
+	id newObject = nil;
+	if ( object != nil ) {
+		
+		NSInteger index = [self indexOfObject:object];
+		if ( index != NSNotFound && index-- > 0 ) {
+			newObject = [self objectAtIndex:index];
+		}
+	}
+	return newObject;
+}
+
 @end
 
 

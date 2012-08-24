@@ -12,6 +12,10 @@
 @interface NSArray(WoolyFoundation)
 @property (nonatomic,readonly,getter = isEmpty) BOOL empty;
 - (id)firstObject;
+
+// convenient way to get next/previous object. Very inefficient, do not use to iterate an array.
+- (id)nextObject:(id)object;
+- (id)previousObject:(id)object;
 @end
 
 @interface NSMutableArray(WoolyFoundation)
