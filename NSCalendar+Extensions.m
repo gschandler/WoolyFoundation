@@ -9,6 +9,35 @@
 #import "NSCalendar+Extensions.h"
 
 @implementation NSCalendar (WoolyFoundation)
+- (NSDate *)dateByReplacingComponents:(NSDateComponents *)comps forCalendarUnits:(NSCalendarUnit)units toDate:(NSDate *)date
+{
+	NSParameterAssert(comps);
+	NSParameterAssert(units);
+	NSParameterAssert(date);
+	
+	NSDateComponents *dateComponents = [self components:units fromDate:date];
+	if ( units & NSYearCalendarUnit ) {
+		[dateComponents setYear:[comps year]-[dateComponents year]];
+	}
+	if ( units & NSMonthCalendarUnit ) {
+		[dateComponents setMonth:[comps month]-[dateComponents month]];
+	}
+	if ( units & NSDayCalendarUnit ) {
+		[dateComponents setDay:[comps day]-[dateComponents day]];
+	}
+	if ( units & NSHourCalendarUnit ) {
+		[dateComponents setHour:[comps hour]-[dateComponents hour]];
+	}
+	if ( units & NSMinuteCalendarUnit ) {
+		[dateComponents setMinute:[comps minute]-[dateComponents minute]];
+	}
+	if ( units & NSSecondCalendarUnit ) {
+		[dateComponents setSecond:[comps second]-[dateComponents second]];
+	}
+	
+	NSDate *newDate = [self dateByAddingComponents:dateComponents toDate:date options:0];
+	return newDate;
+}
 
 @end
 

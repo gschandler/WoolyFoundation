@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSCalendar (WoolyFoundation)
+- (NSDate *)dateByReplacingComponents:(NSDateComponents *)comps forCalendarUnits:(NSCalendarUnit)units toDate:(NSDate *)date;
 @end
 
 @interface NSDateComponents (WoolyFoundation)
