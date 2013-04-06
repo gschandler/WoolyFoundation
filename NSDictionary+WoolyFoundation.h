@@ -1,5 +1,5 @@
 //
-//  NSDictionary+WoolyBeast.h
+//  NSDictionary+WoolyFoundation.h
 //  WoolyFoundation
 //
 //  Created by Scott Chandler on 8/9/12.

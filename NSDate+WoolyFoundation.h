@@ -1,5 +1,5 @@
 //
-//  NSDate+Extensions.h
+//  NSDate+WoolyFoundation.h
 //  WBUtilities
 //
 //  Created by Scott Chandler on 1/12/11.

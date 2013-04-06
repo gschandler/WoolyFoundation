@@ -1,12 +1,12 @@
 //
-//  NSDate+Extensions.m
+//  NSDate+WoolyFoundation.m
 //  WBUtilities
 //
 //  Created by Scott Chandler on 1/12/11.
 //  Copyright 2011 Wooly Beast Software, LLC. All rights reserved.
 //
 
-#import "NSDate+Extensions.h"
+#import "NSDate+WoolyFoundation.h"
 
 @implementation NSDate (WoolyFoundation)
 +(NSDate *)yesterday

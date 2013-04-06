@@ -7,7 +7,12 @@
  *
  */
 
-#import "WoolyToolkit.h"
-
-#import "Foundation+Extensions.h"
-
+#ifdef __OBJC__
+#import "NSArray+WoolyFoundation.h"
+#import "NSBundle+WoolyFoundation.h"
+#import "NSCalendar+WoolyFoundation.h"
+#import "NSDictionary+WoolyFoundation.h"
+#import "NSDate+WoolyFoundation.h"
+#import "NSString+WoolyFoundation.h"
+#import "NSValue+WoolyFoundation.h"
+#endif

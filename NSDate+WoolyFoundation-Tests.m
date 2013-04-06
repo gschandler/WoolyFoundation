@@ -1,20 +1,20 @@
 //
-//  NSDate+Extensions-Tests.m
+//  NSDate+WoolyFoundation-Tests.m
 //  WoolyFoundation
 //
 //  Created by Scott Chandler on 4/6/11.
 //  Copyright 2011 Wooly Beast Software, LLC. All rights reserved.
 //
 #import <SenTestingKit/SenTestingKit.h>
-#import "NSDate+Extensions.h"
+#import "NSDate+WoolyFoundation.h"
 
-@interface NSDate_Extensions_Tests : SenTestCase
+@interface NSDate_WoolyFoundation_Tests : SenTestCase
 {
 }
 @end
 
 
-@implementation NSDate_Extensions_Tests
+@implementation NSDate_WoolyFoundation_Tests
 
 - (void)testDateDaysFromToday
 {

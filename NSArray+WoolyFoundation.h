@@ -1,5 +1,5 @@
 //
-//  NSArray+Extensions.h
+//  NSArray+WoolyFoundation.h
 //  WoolyFoundation
 //
 //  Created by Scott Chandler on 4/26/10.
@@ -24,7 +24,7 @@
 - (void)prependObject:(id)object;
 - (void)appendObject:(id)object;
 
-// if other object is not in array, object is not inserted into the list
+// if 'other' object is not in array, object is not inserted into the list
 - (void)insertObject:(id)object afterObject:(id)other;
 - (void)insertObject:(id)object beforeObject:(id)other;
 
@@ -33,5 +33,6 @@
 - (void)addObject:(id)object sortedUsingSelector:(SEL)selector;
 - (void)addObject:(id)object sortedUsingDescriptors:(NSArray *)descriptors;
 
+// companion to 'removeLastObject'
 - (void)removeFirstObject;
 @end

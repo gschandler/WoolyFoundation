@@ -9,24 +9,23 @@
 /* Begin PBXBuildFile section */
 		4C3A6F7815D43F4700066413 /* NSDictionary+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */; };
 		4C3A6F7915D43F4700066413 /* NSDictionary+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */; };
-		4C7E36B5147EF0680049348F /* NSArray+Extensions-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E36B4147EF0680049348F /* NSArray+Extensions-Tests.m */; };
-		4CBA6DD41324098E0052CED7 /* Foundation+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCB1324098E0052CED7 /* Foundation+Extensions.h */; };
-		4CBA6DD51324098E0052CED7 /* NSArray+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCC1324098E0052CED7 /* NSArray+Extensions.h */; };
-		4CBA6DD61324098E0052CED7 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DCD1324098E0052CED7 /* NSArray+Extensions.m */; };
-		4CBA6DD71324098E0052CED7 /* NSBundle+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCE1324098E0052CED7 /* NSBundle+Extensions.h */; };
-		4CBA6DD81324098E0052CED7 /* NSBundle+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DCF1324098E0052CED7 /* NSBundle+Extensions.m */; };
-		4CBA6DD91324098E0052CED7 /* NSString+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DD01324098E0052CED7 /* NSString+Extensions.h */; };
-		4CBA6DDA1324098E0052CED7 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD11324098E0052CED7 /* NSString+Extensions.m */; };
-		4CBA6DDB1324098E0052CED7 /* NSDate+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DD21324098E0052CED7 /* NSDate+Extensions.h */; };
-		4CBA6DDC1324098E0052CED7 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD31324098E0052CED7 /* NSDate+Extensions.m */; };
+		4C7E36B5147EF0680049348F /* NSArray+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */; };
+		4CBA6DD51324098E0052CED7 /* NSArray+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCC1324098E0052CED7 /* NSArray+WoolyFoundation.h */; };
+		4CBA6DD61324098E0052CED7 /* NSArray+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DCD1324098E0052CED7 /* NSArray+WoolyFoundation.m */; };
+		4CBA6DD71324098E0052CED7 /* NSBundle+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCE1324098E0052CED7 /* NSBundle+WoolyFoundation.h */; };
+		4CBA6DD81324098E0052CED7 /* NSBundle+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DCF1324098E0052CED7 /* NSBundle+WoolyFoundation.m */; };
+		4CBA6DD91324098E0052CED7 /* NSString+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DD01324098E0052CED7 /* NSString+WoolyFoundation.h */; };
+		4CBA6DDA1324098E0052CED7 /* NSString+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD11324098E0052CED7 /* NSString+WoolyFoundation.m */; };
+		4CBA6DDB1324098E0052CED7 /* NSDate+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DD21324098E0052CED7 /* NSDate+WoolyFoundation.h */; };
+		4CBA6DDC1324098E0052CED7 /* NSDate+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD31324098E0052CED7 /* NSDate+WoolyFoundation.m */; };
 		4CBA6E9113240BAB0052CED7 /* WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6E9013240BAB0052CED7 /* WoolyFoundation.h */; };
-		4CCB50CB1463AA5700902EF5 /* NSValue+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB50CA1463AA5700902EF5 /* NSValue+Extensions.m */; };
-		4CCB50CF1463B1F800902EF5 /* NSValue+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB50CA1463AA5700902EF5 /* NSValue+Extensions.m */; };
-		4CD513FC134D090E004E466E /* NSString+Extensions-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD513FB134D090E004E466E /* NSString+Extensions-Tests.m */; };
-		4CD5140D134D0A2B004E466E /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD11324098E0052CED7 /* NSString+Extensions.m */; };
-		4CD5143E134D2707004E466E /* NSDate+Extensions-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5143D134D2707004E466E /* NSDate+Extensions-Tests.m */; };
-		4CEE194E153CBDD200C9551D /* NSCalendar+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CEE194C153CBDD200C9551D /* NSCalendar+Extensions.h */; };
-		4CEE194F153CBDD200C9551D /* NSCalendar+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE194D153CBDD200C9551D /* NSCalendar+Extensions.m */; };
+		4CCB50CB1463AA5700902EF5 /* NSValue+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB50CA1463AA5700902EF5 /* NSValue+WoolyFoundation.m */; };
+		4CCB50CF1463B1F800902EF5 /* NSValue+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB50CA1463AA5700902EF5 /* NSValue+WoolyFoundation.m */; };
+		4CD513FC134D090E004E466E /* NSString+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */; };
+		4CD5140D134D0A2B004E466E /* NSString+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD11324098E0052CED7 /* NSString+WoolyFoundation.m */; };
+		4CD5143E134D2707004E466E /* NSDate+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */; };
+		4CEE194E153CBDD200C9551D /* NSCalendar+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CEE194C153CBDD200C9551D /* NSCalendar+WoolyFoundation.h */; };
+		4CEE194F153CBDD200C9551D /* NSCalendar+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE194D153CBDD200C9551D /* NSCalendar+WoolyFoundation.m */; };
 		AA747D9F0F9514B9006C5449 /* WoolyFoundation_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* WoolyFoundation_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -34,26 +33,24 @@
 /* Begin PBXFileReference section */
 		4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WoolyFoundation.h"; sourceTree = "<group>"; };
 		4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WoolyFoundation.m"; sourceTree = "<group>"; };
-		4C7E36B3147EF0680049348F /* NSArray+Extensions-Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions-Tests.h"; sourceTree = "<group>"; };
-		4C7E36B4147EF0680049348F /* NSArray+Extensions-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions-Tests.m"; sourceTree = "<group>"; };
-		4CBA6DCB1324098E0052CED7 /* Foundation+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Extensions.h"; sourceTree = "<group>"; };
-		4CBA6DCC1324098E0052CED7 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
-		4CBA6DCD1324098E0052CED7 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
-		4CBA6DCE1324098E0052CED7 /* NSBundle+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Extensions.h"; sourceTree = "<group>"; };
-		4CBA6DCF1324098E0052CED7 /* NSBundle+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Extensions.m"; sourceTree = "<group>"; };
-		4CBA6DD01324098E0052CED7 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
-		4CBA6DD11324098E0052CED7 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
-		4CBA6DD21324098E0052CED7 /* NSDate+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
-		4CBA6DD31324098E0052CED7 /* NSDate+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
+		4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
+		4CBA6DCC1324098E0052CED7 /* NSArray+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WoolyFoundation.h"; sourceTree = "<group>"; };
+		4CBA6DCD1324098E0052CED7 /* NSArray+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WoolyFoundation.m"; sourceTree = "<group>"; };
+		4CBA6DCE1324098E0052CED7 /* NSBundle+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+WoolyFoundation.h"; sourceTree = "<group>"; };
+		4CBA6DCF1324098E0052CED7 /* NSBundle+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+WoolyFoundation.m"; sourceTree = "<group>"; };
+		4CBA6DD01324098E0052CED7 /* NSString+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WoolyFoundation.h"; sourceTree = "<group>"; };
+		4CBA6DD11324098E0052CED7 /* NSString+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WoolyFoundation.m"; sourceTree = "<group>"; };
+		4CBA6DD21324098E0052CED7 /* NSDate+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WoolyFoundation.h"; sourceTree = "<group>"; };
+		4CBA6DD31324098E0052CED7 /* NSDate+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WoolyFoundation.m"; sourceTree = "<group>"; };
 		4CBA6E9013240BAB0052CED7 /* WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoolyFoundation.h; sourceTree = "<group>"; };
-		4CCB50C91463AA5700902EF5 /* NSValue+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Extensions.h"; sourceTree = "<group>"; };
-		4CCB50CA1463AA5700902EF5 /* NSValue+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Extensions.m"; sourceTree = "<group>"; };
+		4CCB50C91463AA5700902EF5 /* NSValue+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+WoolyFoundation.h"; sourceTree = "<group>"; };
+		4CCB50CA1463AA5700902EF5 /* NSValue+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+WoolyFoundation.m"; sourceTree = "<group>"; };
 		4CD513F3134D08BE004E466E /* WoolyFoundationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoolyFoundationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WoolyFoundationTests-Info.plist"; sourceTree = "<group>"; };
-		4CD513FB134D090E004E466E /* NSString+Extensions-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions-Tests.m"; sourceTree = "<group>"; };
-		4CD5143D134D2707004E466E /* NSDate+Extensions-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions-Tests.m"; sourceTree = "<group>"; };
-		4CEE194C153CBDD200C9551D /* NSCalendar+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Extensions.h"; sourceTree = "<group>"; };
-		4CEE194D153CBDD200C9551D /* NSCalendar+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Extensions.m"; sourceTree = "<group>"; };
+		4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
+		4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
+		4CEE194C153CBDD200C9551D /* NSCalendar+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+WoolyFoundation.h"; sourceTree = "<group>"; };
+		4CEE194D153CBDD200C9551D /* NSCalendar+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+WoolyFoundation.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* WoolyFoundation_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoolyFoundation_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libWoolyFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWoolyFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +92,6 @@
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */,
 			);
 			name = WoolyFoundation;
 			sourceTree = "<group>";
@@ -111,19 +107,18 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4CBA6DCB1324098E0052CED7 /* Foundation+Extensions.h */,
-				4CBA6DCC1324098E0052CED7 /* NSArray+Extensions.h */,
-				4CBA6DCD1324098E0052CED7 /* NSArray+Extensions.m */,
-				4CBA6DCE1324098E0052CED7 /* NSBundle+Extensions.h */,
-				4CBA6DCF1324098E0052CED7 /* NSBundle+Extensions.m */,
-				4CBA6DD01324098E0052CED7 /* NSString+Extensions.h */,
-				4CBA6DD11324098E0052CED7 /* NSString+Extensions.m */,
-				4CBA6DD21324098E0052CED7 /* NSDate+Extensions.h */,
-				4CBA6DD31324098E0052CED7 /* NSDate+Extensions.m */,
-				4CCB50C91463AA5700902EF5 /* NSValue+Extensions.h */,
-				4CCB50CA1463AA5700902EF5 /* NSValue+Extensions.m */,
-				4CEE194C153CBDD200C9551D /* NSCalendar+Extensions.h */,
-				4CEE194D153CBDD200C9551D /* NSCalendar+Extensions.m */,
+				4CBA6DCC1324098E0052CED7 /* NSArray+WoolyFoundation.h */,
+				4CBA6DCD1324098E0052CED7 /* NSArray+WoolyFoundation.m */,
+				4CBA6DCE1324098E0052CED7 /* NSBundle+WoolyFoundation.h */,
+				4CBA6DCF1324098E0052CED7 /* NSBundle+WoolyFoundation.m */,
+				4CBA6DD01324098E0052CED7 /* NSString+WoolyFoundation.h */,
+				4CBA6DD11324098E0052CED7 /* NSString+WoolyFoundation.m */,
+				4CBA6DD21324098E0052CED7 /* NSDate+WoolyFoundation.h */,
+				4CBA6DD31324098E0052CED7 /* NSDate+WoolyFoundation.m */,
+				4CCB50C91463AA5700902EF5 /* NSValue+WoolyFoundation.h */,
+				4CCB50CA1463AA5700902EF5 /* NSValue+WoolyFoundation.m */,
+				4CEE194C153CBDD200C9551D /* NSCalendar+WoolyFoundation.h */,
+				4CEE194D153CBDD200C9551D /* NSCalendar+WoolyFoundation.m */,
 				4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */,
 				4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */,
 			);
@@ -142,10 +137,10 @@
 		4CD513F9134D08C9004E466E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4CD513FB134D090E004E466E /* NSString+Extensions-Tests.m */,
-				4CD5143D134D2707004E466E /* NSDate+Extensions-Tests.m */,
-				4C7E36B3147EF0680049348F /* NSArray+Extensions-Tests.h */,
-				4C7E36B4147EF0680049348F /* NSArray+Extensions-Tests.m */,
+				4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */,
+				4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */,
+				4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */,
+				4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -158,13 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* WoolyFoundation_Prefix.pch in Headers */,
-				4CBA6DD41324098E0052CED7 /* Foundation+Extensions.h in Headers */,
-				4CBA6DD51324098E0052CED7 /* NSArray+Extensions.h in Headers */,
-				4CBA6DD71324098E0052CED7 /* NSBundle+Extensions.h in Headers */,
-				4CBA6DD91324098E0052CED7 /* NSString+Extensions.h in Headers */,
-				4CBA6DDB1324098E0052CED7 /* NSDate+Extensions.h in Headers */,
+				4CBA6DD51324098E0052CED7 /* NSArray+WoolyFoundation.h in Headers */,
+				4CBA6DD71324098E0052CED7 /* NSBundle+WoolyFoundation.h in Headers */,
+				4CBA6DD91324098E0052CED7 /* NSString+WoolyFoundation.h in Headers */,
+				4CBA6DDB1324098E0052CED7 /* NSDate+WoolyFoundation.h in Headers */,
 				4CBA6E9113240BAB0052CED7 /* WoolyFoundation.h in Headers */,
-				4CEE194E153CBDD200C9551D /* NSCalendar+Extensions.h in Headers */,
+				4CEE194E153CBDD200C9551D /* NSCalendar+WoolyFoundation.h in Headers */,
 				4C3A6F7815D43F4700066413 /* NSDictionary+WoolyFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,11 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD513FC134D090E004E466E /* NSString+Extensions-Tests.m in Sources */,
-				4CD5140D134D0A2B004E466E /* NSString+Extensions.m in Sources */,
-				4CD5143E134D2707004E466E /* NSDate+Extensions-Tests.m in Sources */,
-				4CCB50CB1463AA5700902EF5 /* NSValue+Extensions.m in Sources */,
-				4C7E36B5147EF0680049348F /* NSArray+Extensions-Tests.m in Sources */,
+				4CD513FC134D090E004E466E /* NSString+WoolyFoundation-Tests.m in Sources */,
+				4CD5140D134D0A2B004E466E /* NSString+WoolyFoundation.m in Sources */,
+				4CD5143E134D2707004E466E /* NSDate+WoolyFoundation-Tests.m in Sources */,
+				4CCB50CB1463AA5700902EF5 /* NSValue+WoolyFoundation.m in Sources */,
+				4C7E36B5147EF0680049348F /* NSArray+WoolyFoundation-Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,12 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CCB50CF1463B1F800902EF5 /* NSValue+Extensions.m in Sources */,
-				4CBA6DD61324098E0052CED7 /* NSArray+Extensions.m in Sources */,
-				4CBA6DD81324098E0052CED7 /* NSBundle+Extensions.m in Sources */,
-				4CBA6DDA1324098E0052CED7 /* NSString+Extensions.m in Sources */,
-				4CBA6DDC1324098E0052CED7 /* NSDate+Extensions.m in Sources */,
-				4CEE194F153CBDD200C9551D /* NSCalendar+Extensions.m in Sources */,
+				4CCB50CF1463B1F800902EF5 /* NSValue+WoolyFoundation.m in Sources */,
+				4CBA6DD61324098E0052CED7 /* NSArray+WoolyFoundation.m in Sources */,
+				4CBA6DD81324098E0052CED7 /* NSBundle+WoolyFoundation.m in Sources */,
+				4CBA6DDA1324098E0052CED7 /* NSString+WoolyFoundation.m in Sources */,
+				4CBA6DDC1324098E0052CED7 /* NSDate+WoolyFoundation.m in Sources */,
+				4CEE194F153CBDD200C9551D /* NSCalendar+WoolyFoundation.m in Sources */,
 				4C3A6F7915D43F4700066413 /* NSDictionary+WoolyFoundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

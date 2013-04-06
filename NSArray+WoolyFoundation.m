@@ -1,12 +1,12 @@
 //
-//  NSArray+Extensions.m
+//  NSArray+WoolyFoundation.m
 //  Gigbook
 //
 //  Created by Scott Chandler on 4/26/10.
 //  Copyright 2010 Wooly Beast Software, LLC. All rights reserved.
 //
 
-#import "NSArray+Extensions.h"
+#import "NSArray+WoolyFoundation.h"
 #import <objc/message.h>
 
 @implementation NSArray(WoolyFoundation)

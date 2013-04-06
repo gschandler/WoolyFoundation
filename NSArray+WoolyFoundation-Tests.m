@@ -1,19 +1,19 @@
 //
-//  NSArray+Extensions-Tests.m
+//  NSArray+WoolyFoundation-Tests.m
 //  WoolyFoundation
 //
 //  Created by Scott Chandler on 11/24/11.
 //  Copyright (c) 2011 Wooly Beast Software, LLC. All rights reserved.
 //
 
-#import "NSArray+Extensions.h"
+#import "NSArray+WoolyFoundation.h"
 
-@interface NSArray_Extensions_Tests : SenTestCase
+@interface NSArray_WoolyFoundation_Tests : SenTestCase
 {
 }
 @end
 
-@implementation NSArray_Extensions_Tests
+@implementation NSArray_WoolyFoundation_Tests
 
 - (void)testFirstObject
 {

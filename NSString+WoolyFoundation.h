@@ -1,5 +1,5 @@
 //
-//  NSString+Extensions.h
+//  NSString+WoolyFoundation.h
 //  Gigbook
 //
 //  Created by Scott Chandler on 5/3/10.

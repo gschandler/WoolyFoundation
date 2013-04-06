@@ -1,12 +1,12 @@
 //
-//  NSCalendar+Extensions.m
+//  NSCalendar+WoolyFoundation.m
 //  WoolyFoundation
 //
 //  Created by Scott Chandler on 4/16/12.
 //  Copyright (c) 2012 Wooly Beast Software, LLC. All rights reserved.
 //
 
-#import "NSCalendar+Extensions.h"
+#import "NSCalendar+WoolyFoundation.h"
 
 @implementation NSCalendar (WoolyFoundation)
 - (NSDate *)dateByReplacingComponents:(NSDateComponents *)comps forCalendarUnits:(NSCalendarUnit)units toDate:(NSDate *)date

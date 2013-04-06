@@ -1,20 +1,20 @@
 //
-//  NSString+Extensions-Tests.m
+//  NSString+WoolyFoundation-Tests.m
 //  WoolyFoundation
 //
 //  Created by Scott Chandler on 4/6/11.
 //  Copyright 2011 Wooly Beast Software, LLC. All rights reserved.
 //
 #import <SenTestingKit/SenTestingKit.h>
-#import "NSString+Extensions.h"
+#import "NSString+WoolyFoundation.h"
 
-@interface NSString_Extensions_Tests : SenTestCase {
+@interface NSString_WoolyFoundation_Tests : SenTestCase {
 	
 }
 @end
 
 
-@implementation NSString_Extensions_Tests
+@implementation NSString_WoolyFoundation_Tests
 
 - (void)testFirstCharacter
 {

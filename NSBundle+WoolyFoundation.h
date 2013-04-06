@@ -1,5 +1,5 @@
 //
-//  NSBundle+Extensions.h
+//  NSBundle+WoolyFoundation.h
 //  Gigbook
 //
 //  Created by Scott Chandler on 1/3/11.

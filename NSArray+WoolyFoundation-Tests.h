@@ -1,5 +1,5 @@
 //
-//  NSArray+Extensions-Tests.h
+//  NSArray+WoolyFoundation-Tests.h
 //  WoolyFoundation
 //
 //  Created by Scott Chandler on 11/24/11.

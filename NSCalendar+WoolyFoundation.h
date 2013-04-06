@@ -1,5 +1,5 @@
 //
-//  NSCalendar+Extensions.h
+//  NSCalendar+WoolyFoundation.h
 //  WoolyFoundation
 //
 //  Created by Scott Chandler on 4/16/12.
