@@ -47,6 +47,12 @@
 	return newObject;
 }
 
+- (NSArray *)reversedArray
+{
+	NSMutableArray *work = [NSMutableArray arrayWithArray:self];
+	[work reverse];
+	return [NSArray arrayWithArray:work];
+}
 @end
 
 
@@ -180,4 +186,11 @@ static NSInteger SelectorComparator( id obj1, id obj2, void *context )
     }
 }
 
+- (void)reverse
+{
+	NSInteger left = 0, right = self.count - 1;
+	while ( left < right ) {
+		[self exchangeObjectAtIndex:left++ withObjectAtIndex:right--];
+	}
+}
 @end

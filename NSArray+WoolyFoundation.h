@@ -16,6 +16,8 @@
 // convenient way to get next/previous object. Very inefficient, do not use to iterate an array.
 - (id)nextObject:(id)object;
 - (id)previousObject:(id)object;
+
+- (NSArray *)reversedArray;
 @end
 
 @interface NSMutableArray(WoolyFoundation)
@@ -35,4 +37,6 @@
 
 // companion to 'removeLastObject'
 - (void)removeFirstObject;
+
+- (void)reverse;
 @end
