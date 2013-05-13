@@ -56,4 +56,6 @@
 - (BOOL)isBeforeNow;
 - (BOOL)isAfterNow;
 
+- (BOOL)isInFuture;
+- (BOOL)isInPast;
 @end

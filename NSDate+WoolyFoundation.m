@@ -236,4 +236,14 @@
 	return [self isAfterDate:[NSDate date]];
 }
 
+- (BOOL)isInFuture
+{
+	return [self isAfterNow];
+}
+
+- (BOOL)isInPast
+{
+	return [self isBeforeNow];
+}
+
 @end
