@@ -1,9 +1,27 @@
 //
 //  NSDate+WoolyFoundation.m
-//  WBUtilities
 //
-//  Created by Scott Chandler on 1/12/11.
-//  Copyright 2011 Wooly Beast Software, LLC. All rights reserved.
+//	The MIT License (MIT)
+//
+//	Copyright (c) 2013 Wooly Beast Software
+//
+//	Permission is hereby granted, free of charge, to any person obtaining a copy
+//	of this software and associated documentation files (the "Software"), to deal
+//	in the Software without restriction, including without limitation the rights
+//	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//	copies of the Software, and to permit persons to whom the Software is
+//	furnished to do so, subject to the following conditions:
+//
+//	The above copyright notice and this permission notice shall be included in
+//	all copies or substantial portions of the Software.
+//
+//	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//	THE SOFTWARE.
 //
 
 #import "NSDate+WoolyFoundation.h"
@@ -35,7 +53,9 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = days;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:today options:0];
+#if !__has_feature(objc_arc)
 	[offset release];
+#endif
 	return date;
 }
 
@@ -79,7 +99,9 @@
 		offset.day = 1;
 		offset.second = -1;
 		NSDate *endOfDay = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:startOfDay options:0];
+#if !__has_feature(objc_arc)
 		[offset release];
+#endif
 		today &= [self earlierDate:endOfDay] == self;
 	}
 	return today;
@@ -91,7 +113,9 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.hour = 1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+#if !__has_feature(objc_arc)
 	[offset release];
+#endif
 	return date;
 }
 
@@ -100,7 +124,9 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.hour = -1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+#if !__has_feature(objc_arc)
 	[offset release];
+#endif
 	return date;
 }
 
@@ -126,7 +152,9 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = 1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+#if !__has_feature(objc_arc)
 	[offset release];
+#endif
 	return date;
 }
 
@@ -135,7 +163,9 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = -1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+#if !__has_feature(objc_arc)
 	[offset release];
+#endif
 	return date;
 }
 
@@ -161,7 +191,9 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.week = 1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+#if !__has_feature(objc_arc)
 	[offset release];
+#endif
 	return date;
 }
 
@@ -170,7 +202,9 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.week = -1;
 	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+#if !__has_feature(objc_arc)
 	[offset release];
+#endif
 	return date;
 }
 

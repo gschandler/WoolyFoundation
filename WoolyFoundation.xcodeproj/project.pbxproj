@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1A3210176FB2BD0092D76B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1A320F176FB2BD0092D76B /* SenTestingKit.framework */; };
+		4C1A3211176FB2CA0092D76B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		4C3A6F7815D43F4700066413 /* NSDictionary+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */; };
 		4C3A6F7915D43F4700066413 /* NSDictionary+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */; };
 		4C7E36B5147EF0680049348F /* NSArray+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */; };
@@ -31,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C1A320F176FB2BD0092D76B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WoolyFoundation.h"; sourceTree = "<group>"; };
 		4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WoolyFoundation.m"; sourceTree = "<group>"; };
 		4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
@@ -61,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1A3211176FB2CA0092D76B /* Foundation.framework in Frameworks */,
+				4C1A3210176FB2BD0092D76B /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +104,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C1A320F176FB2BD0092D76B /* SenTestingKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
