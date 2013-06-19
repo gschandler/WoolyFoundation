@@ -6,7 +6,8 @@ used in Wooly Beast Software products. The project builds as an iOS static libra
 linked in other project files. 
 
 This is definitely "work in progress", has minimal documentation, and could be considered
-quite sparse.
+quite sparse. Also note that none of the category methods are prefixed properly, so future releases of iOS may cause conflicts.
+Indeed, this will soon be the case with -[NSArray firstObject] as introduced in iOS 7.
 
 Installation
 ------------
