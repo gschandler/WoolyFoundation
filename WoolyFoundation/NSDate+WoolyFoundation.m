@@ -26,6 +26,14 @@
 
 #import "NSDate+WoolyFoundation.h"
 
+@interface WFCalendarManager : NSObject
+@property (strong,readonly) NSCalendar *calendar;
++ (WFCalendarManager *)calendarManager;
++ (NSCalendar *)calendar;
+- (void)systemTimeZoneChangeNotification:(NSNotification *)notification;
+@end
+
+
 @implementation NSDate (WoolyFoundation)
 +(NSDate *)yesterday
 {
@@ -35,9 +43,8 @@
 
 +(NSDate *)today
 {
-	NSCalendar *currentCalendar = [NSCalendar autoupdatingCurrentCalendar];
-	NSDateComponents *components = [currentCalendar components:NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:[NSDate date]];
-	NSDate *today = [currentCalendar dateFromComponents:components];
+	NSDateComponents *components = [[WFCalendarManager calendar] components:NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+	NSDate *today = [[WFCalendarManager calendar] dateFromComponents:components];
 	return today;
 }
 
@@ -52,7 +59,7 @@
 	NSDate *today = [NSDate today];
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = days;
-	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:today options:0];
+	NSDate *date = [[WFCalendarManager calendar] dateByAddingComponents:offset toDate:today options:0];
 #if !__has_feature(objc_arc)
 	[offset release];
 #endif
@@ -90,29 +97,16 @@
 {
 	if ( date == nil ) return NO;
 	
-	NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
-	NSDateComponents *components = [calendar components:NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:date];
-	NSDate *startOfDay = [calendar dateFromComponents:components];
-	BOOL today = [self laterDate:startOfDay] == self;
-	if ( today ) {
-		NSDateComponents *offset = [NSDateComponents new];
-		offset.day = 1;
-		offset.second = -1;
-		NSDate *endOfDay = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:startOfDay options:0];
-#if !__has_feature(objc_arc)
-		[offset release];
-#endif
-		today &= [self earlierDate:endOfDay] == self;
-	}
-	return today;
-	
+	NSCalendarUnit units = NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit;
+	NSDateComponents *components = [[WFCalendarManager calendar] components:units fromDate:[self beginningOfDay] toDate:[date beginningOfDay] options:0];
+	return components.month==0 && components.day==0 && components.year==0;
 }
 
 - (NSDate *)hourLater
 {
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.hour = 1;
-	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[WFCalendarManager calendar] dateByAddingComponents:offset toDate:self options:0];
 #if !__has_feature(objc_arc)
 	[offset release];
 #endif
@@ -123,7 +117,7 @@
 {
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.hour = -1;
-	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[WFCalendarManager calendar] dateByAddingComponents:offset toDate:self options:0];
 #if !__has_feature(objc_arc)
 	[offset release];
 #endif
@@ -132,8 +126,8 @@
 
 - (NSDate *)thisHour
 {
-	NSDateComponents *components = [[NSCalendar autoupdatingCurrentCalendar] components:NSHourCalendarUnit+NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
-	return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
+	NSDateComponents *components = [[WFCalendarManager calendar] components:NSHourCalendarUnit|NSDayCalendarUnit|NSMonthCalendarUnit|NSYearCalendarUnit|NSEraCalendarUnit fromDate:self];
+	return [[WFCalendarManager calendar] dateFromComponents:components];
 	
 }
 
@@ -151,7 +145,7 @@
 {
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = 1;
-	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[WFCalendarManager calendar] dateByAddingComponents:offset toDate:self options:0];
 #if !__has_feature(objc_arc)
 	[offset release];
 #endif
@@ -162,7 +156,7 @@
 {
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = -1;
-	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[WFCalendarManager calendar] dateByAddingComponents:offset toDate:self options:0];
 #if !__has_feature(objc_arc)
 	[offset release];
 #endif
@@ -171,8 +165,8 @@
 
 - (NSDate *)thisDay
 {
-	NSDateComponents *components = [[NSCalendar autoupdatingCurrentCalendar] components:NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
-	return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
+	NSDateComponents *components = [[WFCalendarManager calendar] components:NSDayCalendarUnit|NSMonthCalendarUnit|NSYearCalendarUnit|NSEraCalendarUnit fromDate:self];
+	return [[WFCalendarManager calendar] dateFromComponents:components];
 	
 }
 
@@ -190,7 +184,7 @@
 {
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.week = 1;
-	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[WFCalendarManager calendar] dateByAddingComponents:offset toDate:self options:0];
 #if !__has_feature(objc_arc)
 	[offset release];
 #endif
@@ -201,7 +195,7 @@
 {
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.week = -1;
-	NSDate *date = [[NSCalendar autoupdatingCurrentCalendar] dateByAddingComponents:offset toDate:self options:0];
+	NSDate *date = [[WFCalendarManager calendar] dateByAddingComponents:offset toDate:self options:0];
 #if !__has_feature(objc_arc)
 	[offset release];
 #endif
@@ -210,8 +204,8 @@
 
 - (NSDate *)thisWeek
 {
-	NSDateComponents *components = [[NSCalendar autoupdatingCurrentCalendar] components:NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
-	return [[NSCalendar autoupdatingCurrentCalendar] dateFromComponents:components];
+	NSDateComponents *components = [[WFCalendarManager calendar] components:NSMonthCalendarUnit+NSYearCalendarUnit+NSEraCalendarUnit fromDate:self];
+	return [[WFCalendarManager calendar] dateFromComponents:components];
 	
 }
 
@@ -227,37 +221,35 @@
 
 - (NSDate *)beginningOfDay
 {
-	NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
-	NSDateComponents *components = [calendar components:NSEraCalendarUnit+NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:self];
+	NSDateComponents *components = [[WFCalendarManager calendar] components:NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:self];
 	[components setHour:0];
 	[components setMinute:0];
 	[components setSecond:0];
-	NSDate *date = [calendar dateFromComponents:components];
+	NSDate *date = [[WFCalendarManager calendar] dateFromComponents:components];
 	return date;
 }
 
 - (NSDate *)endOfDay
 {
-	NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
-	NSDateComponents *components = [calendar components:NSEraCalendarUnit+NSYearCalendarUnit+NSMonthCalendarUnit+NSDayCalendarUnit fromDate:self];
+	NSDateComponents *components = [[WFCalendarManager calendar] components:NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:self];
 	[components setHour:11];
 	[components setMinute:59];
 	[components setSecond:59];
-	NSDate *date = [calendar dateFromComponents:components];
+	NSDate *date = [[WFCalendarManager calendar] dateFromComponents:components];
 	return date;
 }
 
 
 - (BOOL)isBeforeDate:(NSDate *)date
 {
-	NSDate *result = [self laterDate:date];
-	return result == date;
+	NSDate *result = [date earlierDate:self];
+	return result != date;
 }
 
 - (BOOL)isAfterDate:(NSDate *)date
 {
-	NSDate *result = [self earlierDate:date];
-	return result == date;
+	NSDate *result = [date laterDate:self];
+	return result != date;
 }
 
 - (BOOL)isBeforeNow
@@ -280,4 +272,44 @@
 	return [self isBeforeNow];
 }
 
+@end
+
+
+#pragma mark -
+
+@implementation WFCalendarManager
+@synthesize calendar=_calendar;
+
++ (WFCalendarManager *)calendarManager
+{
+	static WFCalendarManager *calenderManager = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		calenderManager = [WFCalendarManager new];
+	});
+	return calenderManager;
+}
+
++ (NSCalendar *)calendar
+{
+	return [[WFCalendarManager calendarManager] calendar];
+}
+
+- (void)systemTimeZoneChangeNotification:(NSNotification *)notification
+{
+	[_calendar setTimeZone:[NSTimeZone systemTimeZone]];
+}
+
+- (id)init
+{
+	if ( self = [super init], self != nil ) {
+		_calendar = [NSCalendar autoupdatingCurrentCalendar];
+		[_calendar setTimeZone:[NSTimeZone systemTimeZone]];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(systemTimeZoneChangeNotification:)
+													 name:NSSystemTimeZoneDidChangeNotification
+												   object:nil];
+	}
+	return self;
+}
 @end
