@@ -25,6 +25,8 @@
 //
 
 #import "NSDate+WoolyFoundation.h"
+#import "WoolyMemory.h"
+
 @interface NSDate(WoolyFoundationExtras)
 - (NSDate *)integralDate;
 @end

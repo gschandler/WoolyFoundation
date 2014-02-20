@@ -33,5 +33,5 @@
 #import "NSDate+WoolyFoundation.h"
 #import "NSString+WoolyFoundation.h"
 #import "NSValue+WoolyFoundation.h"
-
+#import "WoolyMemory.h"
 #endif
