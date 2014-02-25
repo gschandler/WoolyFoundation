@@ -13,6 +13,7 @@
 		4C3A6F7915D43F4700066413 /* NSDictionary+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */; };
 		4C4F45C118B1B88400493FF1 /* libWoolyFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWoolyFoundation.a */; };
 		4C7E36B5147EF0680049348F /* NSArray+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */; };
+		4CB75CD718BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB75CD618BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m */; };
 		4CBA6DD51324098E0052CED7 /* NSArray+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCC1324098E0052CED7 /* NSArray+WoolyFoundation.h */; };
 		4CBA6DD61324098E0052CED7 /* NSArray+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DCD1324098E0052CED7 /* NSArray+WoolyFoundation.m */; };
 		4CBA6DD71324098E0052CED7 /* NSBundle+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCE1324098E0052CED7 /* NSBundle+WoolyFoundation.h */; };
@@ -50,6 +51,7 @@
 		4C737F0D18B342860010931D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4C737F2218B342860010931D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+WoolyFoundation-Tests.m"; path = "WoolyFoundation/NSArray+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
+		4CB75CD618BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+WoolyFoundation-Tests.m"; path = "WoolyFoundation/Tests/NSDictionary+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
 		4CBA6DCC1324098E0052CED7 /* NSArray+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+WoolyFoundation.h"; path = "WoolyFoundation/NSArray+WoolyFoundation.h"; sourceTree = "<group>"; };
 		4CBA6DCD1324098E0052CED7 /* NSArray+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+WoolyFoundation.m"; path = "WoolyFoundation/NSArray+WoolyFoundation.m"; sourceTree = "<group>"; };
 		4CBA6DCE1324098E0052CED7 /* NSBundle+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+WoolyFoundation.h"; path = "WoolyFoundation/NSBundle+WoolyFoundation.h"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */,
 				4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */,
 				4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */,
+				4CB75CD618BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m */,
 				4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */,
 			);
 			name = Tests;
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB75CD718BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m in Sources */,
 				4CD513FC134D090E004E466E /* NSString+WoolyFoundation-Tests.m in Sources */,
 				4CD5143E134D2707004E466E /* NSDate+WoolyFoundation-Tests.m in Sources */,
 				4C7E36B5147EF0680049348F /* NSArray+WoolyFoundation-Tests.m in Sources */,
