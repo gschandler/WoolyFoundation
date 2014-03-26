@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EB904B5E-60EB-4372-888D-6F4C266E19AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WoolyFoundation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8ECBF311-A72E-4A73-9884-889C6114B6F7</key>
+		<string>https://github.com/WoolyBeastSoftwareLLC/WoolyFoundation.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WoolyFoundation.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8ECBF311-A72E-4A73-9884-889C6114B6F7</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/WoolyBeastSoftwareLLC/WoolyFoundation.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8ECBF311-A72E-4A73-9884-889C6114B6F7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8ECBF311-A72E-4A73-9884-889C6114B6F7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WoolyFoundation</string>
+		</dict>
+	</array>
+</dict>
+</plist>

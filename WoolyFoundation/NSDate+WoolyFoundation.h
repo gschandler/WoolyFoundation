@@ -49,7 +49,7 @@
 - (NSDate *)previousWeek;
 - (NSDate *)nextWeek;
 
-- (NSDate *)beginningOfDay;
+- (NSDate *)startOfDay;
 - (NSDate *)endOfDay;
 
 // yesterday
@@ -70,6 +70,9 @@
 
 - (BOOL)isBeforeDate:(NSDate *)date;
 - (BOOL)isAfterDate:(NSDate *)date;
+
+- (BOOL)isBeforeDay:(NSDate *)date;
+- (BOOL)isAfterDay:(NSDate *)date;
 
 - (BOOL)isBeforeNow;
 - (BOOL)isAfterNow;
