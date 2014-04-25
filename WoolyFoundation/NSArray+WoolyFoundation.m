@@ -71,6 +71,12 @@
 	[work reverse];
 	return [NSArray arrayWithArray:work];
 }
+
+- (BOOL)validIndex:(NSInteger)index
+{
+	return self.count > index && index >= 0;
+}
+
 @end
 
 
