@@ -27,6 +27,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSNumber (WoolyFoundation)
+// Pretty much useless with the addition of literals @NO and @YES
+// Consider these deprecated
 + (NSNumber *)numberWithBoolYES;
 + (NSNumber *)numberWithBoolNO;
 @end
