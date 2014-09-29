@@ -28,51 +28,10 @@
 
 
 @interface NSDate (WoolyFoundation)
-
-+ (NSDate *)dateDaysFromToday:(NSInteger)days;
-
-- (NSDate *)hourLater;
-- (NSDate *)hourEarlier;
-- (NSDate *)thisHour;		// start of hour
-- (NSDate *)previousHour;
-- (NSDate *)nextHour;
-
-- (NSDate *)dayLater;
-- (NSDate *)dayEarlier;
-- (NSDate *)thisDay;		// start of day
-- (NSDate *)previousDay;
-- (NSDate *)nextDay;
-
-- (NSDate *)weekLater;
-- (NSDate *)weekEarlier;
-- (NSDate *)thisWeek;		// start of week
-- (NSDate *)previousWeek;
-- (NSDate *)nextWeek;
-
-- (NSDate *)startOfDay;
-- (NSDate *)endOfDay;
-
-// yesterday
-+ (NSDate *)yesterday;		// 00:00:00 yesterday
-- (BOOL)isYesterday;
-
-// today
-+ (NSDate *)today;			// 00:00:00 today
-- (BOOL)isBeforeToday;
-- (BOOL)isToday;
-- (BOOL)isAfterToday;
-
-// tomorrow
-+ (NSDate *)tomorrow;		// 00:00:00 tomorrow
-- (BOOL)isTomorrow;
-
-- (BOOL)isSameDayAsDate:(NSDate *)date;
+- (NSDate *)integralDate;
 
 - (BOOL)isBeforeDate:(NSDate *)date;
 - (BOOL)isAfterDate:(NSDate *)date;
-
-- (BOOL)isBeforeDay:(NSDate *)date;
-- (BOOL)isAfterDay:(NSDate *)date;
 
 - (BOOL)isBeforeNow;
 - (BOOL)isAfterNow;
