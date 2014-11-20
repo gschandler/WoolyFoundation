@@ -28,6 +28,50 @@
 
 @interface NSCalendar (WoolyFoundation)
 - (NSDate *)dateByReplacingComponents:(NSDateComponents *)comps forCalendarUnits:(NSCalendarUnit)units toDate:(NSDate *)date;
+
+// calculations
+- (NSDate *)dateDaysFromToday:(NSInteger)days;
+
+- (NSDate *)hourLaterThanDate:(NSDate *)date;
+- (NSDate *)hourEarlierThanDate:(NSDate *)date;
+- (NSDate *)thisHourFromDate:(NSDate *)date;		// start of hour
+- (NSDate *)previousHourFromDate:(NSDate *)date;
+- (NSDate *)nextHourFromDate:(NSDate *)date;
+
+- (NSDate *)dayLaterThanDate:(NSDate *)date;
+- (NSDate *)dayEarlierThanDate:(NSDate *)date;
+- (NSDate *)thisDayFromDate:(NSDate *)date;		// start of day
+- (NSDate *)previousDayFromDate:(NSDate *)date;
+- (NSDate *)nextDayFromDate:(NSDate *)date;
+
+- (NSDate *)weekLaterThanDate:(NSDate *)date;
+- (NSDate *)weekEarlierThanDate:(NSDate *)date;
+- (NSDate *)thisWeekFromDate:(NSDate *)date;		// start of week
+- (NSDate *)previousWeekFromDate:(NSDate *)date;
+- (NSDate *)nextWeekFromDate:(NSDate *)date;
+
+- (NSDate *)startOfDayFromDate:(NSDate *)date;
+- (NSDate *)endOfDayFromDate:(NSDate *)date;
+
+// yesterday
+- (NSDate *)yesterday;		// 00:00:00 yesterday
+- (BOOL)dateIsYesterday:(NSDate *)date;
+
+// today
+- (NSDate *)today;			// 00:00:00 today
+- (BOOL)dateIsBeforeToday:(NSDate *)date;
+- (BOOL)dateIsToday:(NSDate *)date;
+- (BOOL)dateIsAfterToday:(NSDate *)date;
+
+// tomorrow
+- (NSDate *)tomorrow;		// 00:00:00 tomorrow
+- (BOOL)dateIsTomorrow:(NSDate *)date;
+
+- (BOOL)date:(NSDate *)date isSameDayAsDate:(NSDate *)other;
+
+// comparisons
+- (BOOL)date:(NSDate *)date isBeforeDay:(NSDate *)other;
+- (BOOL)date:(NSDate *)date isAfterDay:(NSDate *)other;
 @end
 
 @interface NSDateComponents (WoolyFoundation)
