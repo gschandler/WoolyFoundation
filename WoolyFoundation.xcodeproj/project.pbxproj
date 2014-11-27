@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C1A3210176FB2BD0092D76B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1A320F176FB2BD0092D76B /* SenTestingKit.framework */; };
-		4C1A3211176FB2CA0092D76B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		4C1AD29E1A207E5F00169801 /* NSArray+WoolyFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CBA6DCC1324098E0052CED7 /* NSArray+WoolyFoundation.h */; };
+		4C1AD29F1A207E5F00169801 /* NSBundle+WoolyFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CBA6DCE1324098E0052CED7 /* NSBundle+WoolyFoundation.h */; };
+		4C1AD2A01A207E5F00169801 /* NSString+WoolyFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CBA6DD01324098E0052CED7 /* NSString+WoolyFoundation.h */; };
+		4C1AD2A11A207E5F00169801 /* NSDate+WoolyFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CBA6DD21324098E0052CED7 /* NSDate+WoolyFoundation.h */; };
+		4C1AD2A21A207E5F00169801 /* NSValue+WoolyFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CCB50C91463AA5700902EF5 /* NSValue+WoolyFoundation.h */; };
+		4C1AD2A31A207E5F00169801 /* NSCalendar+WoolyFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CEE194C153CBDD200C9551D /* NSCalendar+WoolyFoundation.h */; };
+		4C1AD2A41A207E5F00169801 /* NSDictionary+WoolyFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */; };
+		4C1AD2A51A207E5F00169801 /* WoolyFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CBA6E9013240BAB0052CED7 /* WoolyFoundation.h */; };
+		4C1AD2A61A207E5F00169801 /* WoolyMemory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4C4F45C018B0978000493FF1 /* WoolyMemory.h */; };
 		4C3A6F7815D43F4700066413 /* NSDictionary+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */; };
 		4C3A6F7915D43F4700066413 /* NSDictionary+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */; };
-		4C4F45C118B1B88400493FF1 /* libWoolyFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWoolyFoundation.a */; };
-		4C7E36B5147EF0680049348F /* NSArray+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */; };
-		4CB75CD718BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB75CD618BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m */; };
+		4C5228D81A226D90002364BF /* WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5228D71A226D90002364BF /* WoolyFoundation.m */; };
+		4C5228E91A227981002364BF /* WoolyFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5228E81A227981002364BF /* WoolyFoundationTests.m */; };
+		4C5228F01A22798D002364BF /* NSString+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */; };
+		4C5228F11A22798D002364BF /* NSDate+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */; };
+		4C5228F21A22798D002364BF /* NSCalendar+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5228DA1A226E7E002364BF /* NSCalendar+WoolyFoundation-Tests.m */; };
+		4C5228F31A22798D002364BF /* NSArray+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */; };
+		4C5228F41A22798D002364BF /* NSDictionary+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB75CD618BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m */; };
+		4C5228F51A22798D002364BF /* WoolyFoundationTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */; };
+		4C5228F91A232024002364BF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5228F71A231FC3002364BF /* XCTest.framework */; };
+		4C5228FA1A2325A7002364BF /* libWoolyFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWoolyFoundation.a */; };
 		4CBA6DD51324098E0052CED7 /* NSArray+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCC1324098E0052CED7 /* NSArray+WoolyFoundation.h */; };
 		4CBA6DD61324098E0052CED7 /* NSArray+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DCD1324098E0052CED7 /* NSArray+WoolyFoundation.m */; };
 		4CBA6DD71324098E0052CED7 /* NSBundle+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6DCE1324098E0052CED7 /* NSBundle+WoolyFoundation.h */; };
@@ -24,8 +38,6 @@
 		4CBA6DDC1324098E0052CED7 /* NSDate+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA6DD31324098E0052CED7 /* NSDate+WoolyFoundation.m */; };
 		4CBA6E9113240BAB0052CED7 /* WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA6E9013240BAB0052CED7 /* WoolyFoundation.h */; };
 		4CCB50CF1463B1F800902EF5 /* NSValue+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB50CA1463AA5700902EF5 /* NSValue+WoolyFoundation.m */; };
-		4CD513FC134D090E004E466E /* NSString+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */; };
-		4CD5143E134D2707004E466E /* NSDate+WoolyFoundation-Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */; };
 		4CEE194E153CBDD200C9551D /* NSCalendar+WoolyFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CEE194C153CBDD200C9551D /* NSCalendar+WoolyFoundation.h */; };
 		4CEE194F153CBDD200C9551D /* NSCalendar+WoolyFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE194D153CBDD200C9551D /* NSCalendar+WoolyFoundation.m */; };
 		AA747D9F0F9514B9006C5449 /* WoolyFoundation_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* WoolyFoundation_Prefix.pch */; };
@@ -33,7 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4C4F45C218B1B88C00493FF1 /* PBXContainerItemProxy */ = {
+		4C5228EB1A227981002364BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
@@ -42,15 +54,39 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C1AD29D1A207DF800169801 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				4C1AD29E1A207E5F00169801 /* NSArray+WoolyFoundation.h in CopyFiles */,
+				4C1AD29F1A207E5F00169801 /* NSBundle+WoolyFoundation.h in CopyFiles */,
+				4C1AD2A01A207E5F00169801 /* NSString+WoolyFoundation.h in CopyFiles */,
+				4C1AD2A11A207E5F00169801 /* NSDate+WoolyFoundation.h in CopyFiles */,
+				4C1AD2A21A207E5F00169801 /* NSValue+WoolyFoundation.h in CopyFiles */,
+				4C1AD2A31A207E5F00169801 /* NSCalendar+WoolyFoundation.h in CopyFiles */,
+				4C1AD2A41A207E5F00169801 /* NSDictionary+WoolyFoundation.h in CopyFiles */,
+				4C1AD2A51A207E5F00169801 /* WoolyFoundation.h in CopyFiles */,
+				4C1AD2A61A207E5F00169801 /* WoolyMemory.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		4C1A320F176FB2BD0092D76B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+WoolyFoundation.h"; path = "WoolyFoundation/NSDictionary+WoolyFoundation.h"; sourceTree = "<group>"; };
 		4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+WoolyFoundation.m"; path = "WoolyFoundation/NSDictionary+WoolyFoundation.m"; sourceTree = "<group>"; };
 		4C4F45C018B0978000493FF1 /* WoolyMemory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WoolyMemory.h; path = WoolyFoundation/WoolyMemory.h; sourceTree = "<group>"; };
-		4C737F0B18B342860010931D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4C5228D71A226D90002364BF /* WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WoolyFoundation.m; path = WoolyFoundation/WoolyFoundation.m; sourceTree = "<group>"; };
+		4C5228DA1A226E7E002364BF /* NSCalendar+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+WoolyFoundation-Tests.m"; path = "WoolyFoundation/Tests/NSCalendar+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
+		4C5228E41A227981002364BF /* WoolyFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoolyFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C5228E71A227981002364BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C5228E81A227981002364BF /* WoolyFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoolyFoundationTests.m; sourceTree = "<group>"; };
+		4C5228F71A231FC3002364BF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4C737F0D18B342860010931D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		4C737F2218B342860010931D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+WoolyFoundation-Tests.m"; path = "WoolyFoundation/NSArray+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
+		4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+WoolyFoundation-Tests.m"; path = "WoolyFoundation/Tests/NSArray+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
 		4CB75CD618BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+WoolyFoundation-Tests.m"; path = "WoolyFoundation/Tests/NSDictionary+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
 		4CBA6DCC1324098E0052CED7 /* NSArray+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+WoolyFoundation.h"; path = "WoolyFoundation/NSArray+WoolyFoundation.h"; sourceTree = "<group>"; };
 		4CBA6DCD1324098E0052CED7 /* NSArray+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+WoolyFoundation.m"; path = "WoolyFoundation/NSArray+WoolyFoundation.m"; sourceTree = "<group>"; };
@@ -63,10 +99,9 @@
 		4CBA6E9013240BAB0052CED7 /* WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WoolyFoundation.h; path = WoolyFoundation/WoolyFoundation.h; sourceTree = "<group>"; };
 		4CCB50C91463AA5700902EF5 /* NSValue+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSValue+WoolyFoundation.h"; path = "WoolyFoundation/NSValue+WoolyFoundation.h"; sourceTree = "<group>"; };
 		4CCB50CA1463AA5700902EF5 /* NSValue+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSValue+WoolyFoundation.m"; path = "WoolyFoundation/NSValue+WoolyFoundation.m"; sourceTree = "<group>"; };
-		4CD513F3134D08BE004E466E /* WoolyFoundationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoolyFoundationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WoolyFoundationTests-Info.plist"; path = "WoolyFoundation/WoolyFoundationTests-Info.plist"; sourceTree = "<group>"; };
-		4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+WoolyFoundation-Tests.m"; path = "WoolyFoundation/NSString+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
-		4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+WoolyFoundation-Tests.m"; path = "WoolyFoundation/NSDate+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
+		4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+WoolyFoundation-Tests.m"; path = "WoolyFoundation/Tests/NSString+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
+		4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+WoolyFoundation-Tests.m"; path = "WoolyFoundation/Tests/NSDate+WoolyFoundation-Tests.m"; sourceTree = "<group>"; };
 		4CEE194C153CBDD200C9551D /* NSCalendar+WoolyFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+WoolyFoundation.h"; path = "WoolyFoundation/NSCalendar+WoolyFoundation.h"; sourceTree = "<group>"; };
 		4CEE194D153CBDD200C9551D /* NSCalendar+WoolyFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+WoolyFoundation.m"; path = "WoolyFoundation/NSCalendar+WoolyFoundation.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* WoolyFoundation_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WoolyFoundation_Prefix.pch; path = WoolyFoundation/WoolyFoundation_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -75,13 +110,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4CD513F0134D08BE004E466E /* Frameworks */ = {
+		4C5228E11A227981002364BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C1A3211176FB2CA0092D76B /* Foundation.framework in Frameworks */,
-				4C1A3210176FB2BD0092D76B /* SenTestingKit.framework in Frameworks */,
-				4C4F45C118B1B88400493FF1 /* libWoolyFoundation.a in Frameworks */,
+				4C5228FA1A2325A7002364BF /* libWoolyFoundation.a in Frameworks */,
+				4C5228F91A232024002364BF /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libWoolyFoundation.a */,
-				4CD513F3134D08BE004E466E /* WoolyFoundationTests.octest */,
+				4C5228E41A227981002364BF /* WoolyFoundationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +142,9 @@
 		0867D691FE84028FC02AAC07 /* WoolyFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				4CD513F9134D08C9004E466E /* Tests */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
+				4C5228E51A227981002364BF /* WoolyFoundationTests */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
@@ -120,11 +154,9 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4C1A320F176FB2BD0092D76B /* SenTestingKit.framework */,
+				4C5228F71A231FC3002364BF /* XCTest.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
-				4C737F0B18B342860010931D /* CoreGraphics.framework */,
 				4C737F0D18B342860010931D /* UIKit.framework */,
-				4C737F2218B342860010931D /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -146,6 +178,7 @@
 				4CEE194D153CBDD200C9551D /* NSCalendar+WoolyFoundation.m */,
 				4C3A6F7615D43F4300066413 /* NSDictionary+WoolyFoundation.h */,
 				4C3A6F7715D43F4400066413 /* NSDictionary+WoolyFoundation.m */,
+				4C5228D71A226D90002364BF /* WoolyFoundation.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -160,16 +193,36 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		4C5228E51A227981002364BF /* WoolyFoundationTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CD513F9134D08C9004E466E /* Tests */,
+				4C5228E81A227981002364BF /* WoolyFoundationTests.m */,
+				4C5228E61A227981002364BF /* Supporting Files */,
+			);
+			path = WoolyFoundationTests;
+			sourceTree = "<group>";
+		};
+		4C5228E61A227981002364BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C5228E71A227981002364BF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4CD513F9134D08C9004E466E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				4CD513FB134D090E004E466E /* NSString+WoolyFoundation-Tests.m */,
 				4CD5143D134D2707004E466E /* NSDate+WoolyFoundation-Tests.m */,
+				4C5228DA1A226E7E002364BF /* NSCalendar+WoolyFoundation-Tests.m */,
 				4C7E36B4147EF0680049348F /* NSArray+WoolyFoundation-Tests.m */,
 				4CB75CD618BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m */,
 				4CD513F4134D08BE004E466E /* WoolyFoundationTests-Info.plist */,
 			);
 			name = Tests;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,24 +246,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4CD513F2134D08BE004E466E /* WoolyFoundationTests */ = {
+		4C5228E31A227981002364BF /* WoolyFoundationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4CD513F7134D08BE004E466E /* Build configuration list for PBXNativeTarget "WoolyFoundationTests" */;
+			buildConfigurationList = 4C5228ED1A227981002364BF /* Build configuration list for PBXNativeTarget "WoolyFoundationTests" */;
 			buildPhases = (
-				4CD513EE134D08BE004E466E /* Resources */,
-				4CD513EF134D08BE004E466E /* Sources */,
-				4CD513F0134D08BE004E466E /* Frameworks */,
-				4CD513F1134D08BE004E466E /* ShellScript */,
+				4C5228E01A227981002364BF /* Sources */,
+				4C5228E11A227981002364BF /* Frameworks */,
+				4C5228E21A227981002364BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4C4F45C318B1B88C00493FF1 /* PBXTargetDependency */,
+				4C5228EC1A227981002364BF /* PBXTargetDependency */,
 			);
 			name = WoolyFoundationTests;
 			productName = WoolyFoundationTests;
-			productReference = 4CD513F3134D08BE004E466E /* WoolyFoundationTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 4C5228E41A227981002364BF /* WoolyFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D2AAC07D0554694100DB518D /* WoolyFoundation */ = {
 			isa = PBXNativeTarget;
@@ -219,6 +271,7 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
+				4C1AD29D1A207DF800169801 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -235,7 +288,13 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastTestingUpgradeCheck = 0610;
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					4C5228E31A227981002364BF = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "WoolyFoundation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -254,46 +313,33 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* WoolyFoundation */,
-				4CD513F2134D08BE004E466E /* WoolyFoundationTests */,
+				4C5228E31A227981002364BF /* WoolyFoundationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4CD513EE134D08BE004E466E /* Resources */ = {
+		4C5228E21A227981002364BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C5228F51A22798D002364BF /* WoolyFoundationTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4CD513F1134D08BE004E466E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4CD513EF134D08BE004E466E /* Sources */ = {
+		4C5228E01A227981002364BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CB75CD718BC4754001124B8 /* NSDictionary+WoolyFoundation-Tests.m in Sources */,
-				4CD513FC134D090E004E466E /* NSString+WoolyFoundation-Tests.m in Sources */,
-				4CD5143E134D2707004E466E /* NSDate+WoolyFoundation-Tests.m in Sources */,
-				4C7E36B5147EF0680049348F /* NSArray+WoolyFoundation-Tests.m in Sources */,
+				4C5228F21A22798D002364BF /* NSCalendar+WoolyFoundation-Tests.m in Sources */,
+				4C5228F01A22798D002364BF /* NSString+WoolyFoundation-Tests.m in Sources */,
+				4C5228F41A22798D002364BF /* NSDictionary+WoolyFoundation-Tests.m in Sources */,
+				4C5228F11A22798D002364BF /* NSDate+WoolyFoundation-Tests.m in Sources */,
+				4C5228E91A227981002364BF /* WoolyFoundationTests.m in Sources */,
+				4C5228F31A22798D002364BF /* NSArray+WoolyFoundation-Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +352,7 @@
 				4CBA6DD81324098E0052CED7 /* NSBundle+WoolyFoundation.m in Sources */,
 				4CBA6DDA1324098E0052CED7 /* NSString+WoolyFoundation.m in Sources */,
 				4CBA6DDC1324098E0052CED7 /* NSDate+WoolyFoundation.m in Sources */,
+				4C5228D81A226D90002364BF /* WoolyFoundation.m in Sources */,
 				4CEE194F153CBDD200C9551D /* NSCalendar+WoolyFoundation.m in Sources */,
 				4C3A6F7915D43F4700066413 /* NSDictionary+WoolyFoundation.m in Sources */,
 			);
@@ -314,10 +361,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4C4F45C318B1B88C00493FF1 /* PBXTargetDependency */ = {
+		4C5228EC1A227981002364BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* WoolyFoundation */;
-			targetProxy = 4C4F45C218B1B88C00493FF1 /* PBXContainerItemProxy */;
+			targetProxy = 4C5228EB1A227981002364BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -334,11 +381,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WoolyFoundation/WoolyFoundation_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = WoolyFoundation;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = ..;
 			};
 			name = Debug;
 		};
@@ -354,7 +399,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = WoolyFoundation;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = ..;
 			};
 			name = Release;
 		};
@@ -366,7 +410,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -378,68 +422,98 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
-		4CD513F5134D08BE004E466E /* Debug */ = {
+		4C5228EE1A227981002364BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks",
+					"$(DEVELOPER_DIR)/Platforms/iPhone.platform/Developer/Library/Frameworks",
 				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				INFOPLIST_FILE = "WoolyFoundation/WoolyFoundationTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-					"-all_load",
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
 				);
-				PRODUCT_NAME = WoolyFoundationTests;
-				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = octest;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = WoolyFoundationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		4CD513F6134D08BE004E466E /* Release */ = {
+		4C5228EF1A227981002364BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks",
 				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				INFOPLIST_FILE = "WoolyFoundation/WoolyFoundationTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-					"-all_load",
-				);
-				PRODUCT_NAME = WoolyFoundationTests;
-				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = octest;
-				ZERO_LINK = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = WoolyFoundationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -464,11 +538,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4CD513F7134D08BE004E466E /* Build configuration list for PBXNativeTarget "WoolyFoundationTests" */ = {
+		4C5228ED1A227981002364BF /* Build configuration list for PBXNativeTarget "WoolyFoundationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4CD513F5134D08BE004E466E /* Debug */,
-				4CD513F6134D08BE004E466E /* Release */,
+				4C5228EE1A227981002364BF /* Debug */,
+				4C5228EF1A227981002364BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

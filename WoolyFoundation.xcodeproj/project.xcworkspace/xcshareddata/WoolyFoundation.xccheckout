@@ -10,29 +10,29 @@
 	<string>WoolyFoundation</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8ECBF311-A72E-4A73-9884-889C6114B6F7</key>
-		<string>https://github.com/WoolyBeastSoftwareLLC/WoolyFoundation.git</string>
+		<key>148A0901C215C7B7188CA851406E83AAC7CBE729</key>
+		<string>github.com:WoolyBeastSoftwareLLC/WoolyFoundation.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>WoolyFoundation.xcodeproj/project.xcworkspace</string>
+	<string>WoolyFoundation.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8ECBF311-A72E-4A73-9884-889C6114B6F7</key>
+		<key>148A0901C215C7B7188CA851406E83AAC7CBE729</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/WoolyBeastSoftwareLLC/WoolyFoundation.git</string>
+	<string>github.com:WoolyBeastSoftwareLLC/WoolyFoundation.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8ECBF311-A72E-4A73-9884-889C6114B6F7</string>
+	<string>148A0901C215C7B7188CA851406E83AAC7CBE729</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8ECBF311-A72E-4A73-9884-889C6114B6F7</string>
+			<string>148A0901C215C7B7188CA851406E83AAC7CBE729</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WoolyFoundation</string>
 		</dict>
