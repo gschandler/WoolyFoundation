@@ -1,5 +1,5 @@
 //
-//  NSArray+WoolyFoundation-Tests.h
+//  NSDate+WoolyFoundation-Tests.m
 //
 //	The MIT License (MIT)
 //
@@ -24,11 +24,53 @@
 //	THE SOFTWARE.
 //
 
-//  Logic unit tests contain unit test code that is designed to be linked into an independent test executable.
-//  See Also: http://developer.apple.com/iphone/library/documentation/Xcode/Conceptual/iphone_development/135-Unit_Testing_Applications/unit_testing_applications.html
+#import <XCTest/XCTest.h>
+#import "NSDate+WoolyFoundation.h"
 
-#import <SenTestingKit/SenTestingKit.h>
+@interface NSDate_WoolyFoundation_Tests : XCTestCase
+{
+}
+@end
 
-@interface NSArray_Extensions_Tests : SenTestCase
+
+@implementation NSDate_WoolyFoundation_Tests
+
+- (void)setUp
+{
+	
+}
+
+- (void)tearDown
+{
+	
+}
+
+- (void)testIsBeforeDate
+{
+	NSDate *now = [NSDate date];
+	NSDate *date2 = [now dateByAddingTimeInterval:-10.0];
+	XCTAssertTrue([date2 isBeforeDate:now], @"%@ should be before %@",date2,now);
+}
+
+- (void)testIsAfterDate
+{
+	NSDate *now = [NSDate date];
+	NSDate *date2 = [now dateByAddingTimeInterval:10.0];
+	XCTAssertTrue([date2 isAfterDate:now], @"%@ should be after %@",date2,now);
+}
+
+- (void)testIsBeforeNow
+{
+	NSDate *date = [[NSDate date] dateByAddingTimeInterval:-10.0];	// 10 seconds behind
+	XCTAssertTrue([date isBeforeNow], @"%@ shoud be before now",date);
+}
+
+- (void)testIsAfterNow
+{
+	NSDate *date = [[NSDate date] dateByAddingTimeInterval:10.0];	// 10 seconds ahead
+	XCTAssertTrue([date isAfterNow], @"%@ should be after now",date);
+	
+}
+	
 
 @end

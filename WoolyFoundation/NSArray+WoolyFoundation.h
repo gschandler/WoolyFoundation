@@ -29,7 +29,6 @@
 
 @interface NSArray(WoolyFoundation)
 - (BOOL)isEmpty;
-- (id)firstObject;
 
 // convenient way to get next/previous object. Very inefficient, do not use to iterate an array.
 - (id)nextObject:(id)object;

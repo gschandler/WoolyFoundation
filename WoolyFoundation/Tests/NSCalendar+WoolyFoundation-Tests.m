@@ -24,20 +24,21 @@
 //	THE SOFTWARE.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
-#import "NSDate+WoolyFoundation.h"
+#import <XCTest/XCTest.h>
+#import "NSCalendar+WoolyFoundation.h"
 
-@interface NSDate_WoolyFoundation_Tests : SenTestCase
+@interface NSCalendar_WoolyFoundation_Tests : XCTestCase
 {
 }
+@property (nonatomic,strong) NSCalendar *testCalendar;
 @end
 
 
-@implementation NSDate_WoolyFoundation_Tests
+@implementation NSCalendar_WoolyFoundation_Tests
 
 - (void)setUp
 {
-	
+	self.testCalendar = [NSCalendar currentCalendar];
 }
 
 - (void)tearDown
@@ -45,6 +46,180 @@
 	
 }
 
+//- (NSDate *)dateDaysFromToday:(NSInteger)days;
+- (void)test_dateDaysFromToday
+{
+	
+}
+
+//- (NSDate *)hourLaterThanDate:(NSDate *)date;
+- (void)test_hourLaterThanDate
+{
+	
+}
+
+//- (NSDate *)hourEarlierThanDate:(NSDate *)date;
+- (void)test_hourEarlierThanDate
+{
+	
+}
+
+//- (NSDate *)thisHourFromDate:(NSDate *)date;		// start of hour
+- (void)test_thisHourFromDate
+{
+	
+}
+
+//- (NSDate *)previousHourFromDate:(NSDate *)date;
+- (void)test_previousHourFromDate
+{
+	
+}
+
+//- (NSDate *)nextHourFromDate:(NSDate *)date;
+- (void)test_nextHourFromDate
+{
+	
+}
+
+//- (NSDate *)dayLaterThanDate:(NSDate *)date;
+- (void)test_dayLaterThanDate
+{
+	
+}
+
+//- (NSDate *)dayEarlierThanDate:(NSDate *)date;
+- (void)test_dayEarlierThanDate
+{
+	
+}
+
+//- (NSDate *)thisDayFromDate:(NSDate *)date;		// start of day
+- (void)test_thisDayFromDate
+{
+	
+}
+
+//- (NSDate *)previousDayFromDate:(NSDate *)date;
+- (void)test_previousDayFromDate
+{
+	
+}
+
+//- (NSDate *)nextDayFromDate:(NSDate *)date;
+- (void)test_nextDayFromDate
+{
+	
+}
+
+//- (NSDate *)weekLaterThanDate:(NSDate *)date;
+- (void)test_weekLaterThanDate
+{
+	
+}
+
+//- (NSDate *)weekEarlierThanDate:(NSDate *)date;
+- (void)test_weekEarlierThanDate
+{
+	
+}
+
+//- (NSDate *)thisWeekFromDate:(NSDate *)date;		// start of week
+- (void)test_thisWeekFromDate
+{
+	
+}
+
+//- (NSDate *)previousWeekFromDate:(NSDate *)date;
+- (void)test_previousWeekFromDate
+{
+	
+}
+
+//- (NSDate *)nextWeekFromDate:(NSDate *)date;
+- (void)test_nextWeekFromDate
+{
+	
+}
+
+//- (NSDate *)startOfDayFromDate:(NSDate *)date;
+- (void)test_startOfDayFromDate
+{
+	
+}
+
+//- (NSDate *)endOfDayFromDate:(NSDate *)date;
+- (void)test_endOfDayFromDate
+{
+}
+
+//- (NSDate *)yesterday;		// 00:00:00 yesterday
+- (void)test_yesterday
+{
+	
+}
+
+//- (BOOL)dateIsYesterday:(NSDate *)date;
+- (void)test_dateIsYesterday
+{
+	
+}
+
+//- (NSDate *)today;			// 00:00:00 today
+- (void)test_today
+{
+	
+}
+
+//- (BOOL)dateIsBeforeToday:(NSDate *)date;
+- (void)test_dateIsBeforeToday
+{
+	
+}
+
+//- (BOOL)dateIsToday:(NSDate *)date;
+- (void)test_dateIsToday
+{
+	
+}
+
+//- (BOOL)dateIsAfterToday:(NSDate *)date;
+- (void)test_dateIsAfterToday
+{
+	
+}
+
+//- (NSDate *)tomorrow;		// 00:00:00 tomorrow
+- (void)test_tomorrow
+{
+	
+}
+
+//- (BOOL)dateIsTomorrow:(NSDate *)date;
+- (void)test_dateIsTomorrow
+{
+	
+}
+
+//- (BOOL)date:(NSDate *)date isSameDayAsDate:(NSDate *)other;
+- (void)test_dateIsSameDayAsDate
+{
+	
+}
+
+//- (BOOL)date:(NSDate *)date isBeforeDay:(NSDate *)other;
+- (void)test_dateIsBeforeDay
+{
+	
+}
+
+//- (BOOL)date:(NSDate *)date isAfterDay:(NSDate *)other;
+- (void)test_dateIisAfterDay
+{
+	
+}
+
+#if 0
 - (void)testDateDaysFromToday
 {
 	NSDate *today = [NSDate today];
@@ -256,5 +431,5 @@
 	
 }
 	
-
+#endif
 @end

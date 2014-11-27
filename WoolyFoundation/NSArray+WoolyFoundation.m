@@ -28,12 +28,6 @@
 #import <objc/message.h>
 
 @implementation NSArray(WoolyFoundation)
-- (id)firstObject
-{
-	id object = (self.count > 0) ? [self objectAtIndex:0] : nil;
-	return object;
-}
-
 - (BOOL)isEmpty
 {
 	return self.count == 0;

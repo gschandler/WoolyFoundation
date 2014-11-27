@@ -7,3 +7,5 @@
 //
 
 #import <Foundation/Foundation.h>
+@interface WoolyFoundation_Dummy : NSObject @end
+@implementation WoolyFoundation_Dummy @end

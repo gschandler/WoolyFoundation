@@ -24,10 +24,10 @@
 //	THE SOFTWARE.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "NSArray+WoolyFoundation.h"
 
-@interface NSArray_WoolyFoundation_Tests : SenTestCase
+@interface NSArray_WoolyFoundation_Tests : XCTestCase
 {
 }
 @end
@@ -38,13 +38,13 @@
 {
 	NSArray *items = @[@"First",@"Second",@"Third"];
 	
-	STAssertTrue([[items firstObject] isEqual:[items objectAtIndex:0]],@"firstObject failed");
+	XCTAssertTrue([[items firstObject] isEqual:[items objectAtIndex:0]],@"firstObject failed");
 }
 
 - (void)testIsEmpty
 {
 	NSArray *items = @[];
-	STAssertTrue([items isEmpty], @"");
+	XCTAssertTrue([items isEmpty], @"");
 }
 
 - (void)testReversedArray
@@ -52,7 +52,7 @@
 	NSArray *items = @[@"one",@"two",@"three"];
 	NSArray *reversedItems = [items reversedArray];
 	for ( int i=0,ri=items.count-1; i<items.count;++i,--ri) {
-		STAssertTrue([[items objectAtIndex:i] isEqual:[reversedItems objectAtIndex:ri]], @"");
+		XCTAssertTrue([[items objectAtIndex:i] isEqual:[reversedItems objectAtIndex:ri]], @"");
 	}
 }
 
@@ -61,7 +61,7 @@
 	NSMutableArray *items = [NSMutableArray arrayWithArray: @[@"one"]];
 	NSString * const kValue = @"zero";
 	[items prependObject:kValue];
-	STAssertTrue([[items firstObject] isEqualToString:kValue], @"");
+	XCTAssertTrue([[items firstObject] isEqualToString:kValue], @"");
 }
 
 - (void)testAppendObject
@@ -69,7 +69,7 @@
 	NSMutableArray *items = [NSMutableArray arrayWithArray: @[@"one"]];
 	NSString * const kValue = @"zero";
 	[items appendObject:kValue];
-	STAssertTrue([[items lastObject] isEqualToString:kValue], @"");
+	XCTAssertTrue([[items lastObject] isEqualToString:kValue], @"");
 }
 
 - (void)testReverse
@@ -79,7 +79,7 @@
 	[reversedItems reverse];
 	
 	for ( int i=0,ri=items.count-1; i<items.count;++i,--ri) {
-		STAssertTrue([[items objectAtIndex:i] isEqual:[reversedItems objectAtIndex:ri]], @"");
+		XCTAssertTrue([[items objectAtIndex:i] isEqual:[reversedItems objectAtIndex:ri]], @"");
 	}
 }
 
@@ -87,6 +87,6 @@
 {
 	NSMutableArray *items = [NSMutableArray arrayWithArray:@[@"one",@"two"]];
 	[items removeFirstObject];
-	STAssertTrue([[items firstObject] isEqualToString:@"two"], @"");
+	XCTAssertTrue([[items firstObject] isEqualToString:@"two"], @"");
 }
 @end

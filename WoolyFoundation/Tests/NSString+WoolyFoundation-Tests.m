@@ -24,10 +24,10 @@
 //	THE SOFTWARE.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "NSString+WoolyFoundation.h"
 
-@interface NSString_WoolyFoundation_Tests : SenTestCase {
+@interface NSString_WoolyFoundation_Tests : XCTestCase {
 	
 }
 @end
@@ -40,7 +40,7 @@
 	NSString *test = @"This is a test string";
 	unichar correctValue = 'T';
 	unichar value = test.firstCharacter;
-	STAssertTrue(value == correctValue,@"firstCharacter failed: Got %C, Wanted %C",value,correctValue);
+	XCTAssertTrue(value == correctValue,@"firstCharacter failed: Got %C, Wanted %C",value,correctValue);
 
 }
 
@@ -49,7 +49,7 @@
 	NSString *test = @"This is a test string";
 	NSString *correctResult = @"T";
 	NSString *result = test.substringWithFirstCharacter;
-	STAssertTrue( [result isEqualToString:correctResult], @"substringWithFirstCharacter failed: Got \"%@\", Wanted \"%@\"",result,correctResult);
+	XCTAssertTrue( [result isEqualToString:correctResult], @"substringWithFirstCharacter failed: Got \"%@\", Wanted \"%@\"",result,correctResult);
 }
 
 - (void)testLocalizedCaseInsensitiveNumericCompare
@@ -60,9 +60,9 @@
 	NSString *test4 = @"åbcd";
 	
 //	NSOrderedAscending = -1, NSOrderedSame, NSOrderedDescending
-	STAssertTrue([test1 localizedCaseInsensitiveCompare:test2] == NSOrderedAscending,@"");
-	STAssertTrue([test2 localizedCaseInsensitiveCompare:test3] == NSOrderedSame,@"");
-	STAssertTrue([test3 localizedCaseInsensitiveCompare:test4] == NSOrderedAscending,@"");
+	XCTAssertTrue([test1 localizedCaseInsensitiveCompare:test2] == NSOrderedAscending,@"");
+	XCTAssertTrue([test2 localizedCaseInsensitiveCompare:test3] == NSOrderedSame,@"");
+	XCTAssertTrue([test3 localizedCaseInsensitiveCompare:test4] == NSOrderedAscending,@"");
 	
 }
 
