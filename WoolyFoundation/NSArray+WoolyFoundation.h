@@ -37,6 +37,14 @@
 - (NSArray *)reversedArray;
 
 - (BOOL)validIndex:(NSInteger)index;
+
+- (BOOL)wb_intersectsArray:(NSArray *)other;
+
+#if NS_BLOCKS_AVAILABLE
+- (NSArray *)wb_filter:(BOOL (^)(id))block;
+- (NSArray *)wb_map:(id (^)(id))block;
+- (id)wb_reduce:(id)initialValue apply:(id (^)(id, id))block;
+#endif
 @end
 
 @interface NSMutableArray(WoolyFoundation)
@@ -58,4 +66,6 @@
 - (void)removeFirstObject;
 
 - (void)reverse;
+
+
 @end

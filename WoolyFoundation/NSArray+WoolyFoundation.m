@@ -71,6 +71,57 @@
 	return self.count > index && index >= 0;
 }
 
+- (BOOL)wb_intersectsArray:(NSArray *)other
+{
+	return (other && other.count) ? [self firstObjectCommonWithArray:other] != nil : NO;
+}
+
+#if NS_BLOCKS_AVAILABLE
+- (NSArray *)wb_filter:(BOOL (^)(id))block
+{
+	NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
+	if ( block ) {
+		for ( id obj in self ) {
+			BOOL keep = block(obj);
+			if ( keep ) {
+				[result addObject:obj];
+			}
+		}
+	}
+	return result;
+}
+
+- (NSArray *)wb_map:(id (^)(id))block
+{
+	NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
+	if ( block ) {
+		for ( id obj in self ) {
+			id value = block(obj);
+			if ( !value ) {
+				[NSException raise:NSInternalInconsistencyException format:@"Invalid return value from the block (nil)"];
+			}
+			else {
+				[result addObject:value];
+			}
+		}
+	}
+	return result;
+}
+
+- (id)wb_reduce:(id)initialValue apply:(id (^)(id, id))block
+{
+	id result = initialValue;
+	if ( block ) {
+		for ( id obj in self ) {
+			result = block(result,obj);
+		}
+	}
+	return result;
+}
+
+
+#endif
+
 @end
 
 
@@ -211,4 +262,5 @@ static NSInteger SelectorComparator( id obj1, id obj2, void *context )
 		[self exchangeObjectAtIndex:left++ withObjectAtIndex:right--];
 	}
 }
+
 @end
