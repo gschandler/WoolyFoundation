@@ -197,7 +197,7 @@
 - (NSDate *)weekLaterThanDate:(NSDate *)date
 {
 	NSDateComponents *offset = [NSDateComponents new];
-	offset.week = 1;
+	offset.weekOfYear = 1;
 	date = [self dateByAddingComponents:offset toDate:date options:0];
 	WBRelease(offset);
 	return date;
@@ -206,7 +206,7 @@
 - (NSDate *)weekEarlierThanDate:(NSDate *)date
 {
 	NSDateComponents *offset = [NSDateComponents new];
-	offset.week = -1;
+	offset.weekOfYear = -1;
 	date = [self dateByAddingComponents:offset toDate:date options:0];
 	WBRelease(offset);
 	return date;
