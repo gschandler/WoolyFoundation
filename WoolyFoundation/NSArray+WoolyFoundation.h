@@ -28,14 +28,14 @@
 
 
 @interface NSArray(WoolyFoundation)
-- (BOOL)isEmpty;
-- (id)firstObject;
+@property (nonatomic,readonly) BOOL hasObjects;
+@property (nonatomic,readonly,strong) id firstObject;
 
 // convenient way to get next/previous object. Very inefficient, do not use to iterate an array.
 - (id)nextObject:(id)object;
 - (id)previousObject:(id)object;
 
-- (NSArray *)reversedArray;
+@property (nonatomic,readonly,copy) NSArray *reversedArray;
 
 - (BOOL)validIndex:(NSInteger)index;
 @end
