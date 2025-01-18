@@ -30,13 +30,13 @@
 @implementation NSArray(WoolyFoundation)
 - (id)firstObject
 {
-	id object = (self.count > 0) ? [self objectAtIndex:0] : nil;
+	id object = (self.count > 0) ? self[0] : nil;
 	return object;
 }
 
-- (BOOL)isEmpty
+- (BOOL)hasObjects
 {
-	return self.count == 0;
+	return self.count > 0;
 }
 
 - (id)nextObject:(id)object
@@ -46,7 +46,7 @@
 
 		NSInteger index = [self indexOfObject:object];
 		if ( index != NSNotFound && ++index < [self count] ) {
-			newObject = [self objectAtIndex:index];
+			newObject = self[index];
 		}
 	}
 	return newObject;
@@ -59,7 +59,7 @@
 		
 		NSInteger index = [self indexOfObject:object];
 		if ( index != NSNotFound && index-- > 0 ) {
-			newObject = [self objectAtIndex:index];
+			newObject = self[index];
 		}
 	}
 	return newObject;
