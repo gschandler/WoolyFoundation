@@ -28,14 +28,14 @@
 
 
 @interface NSDate (WoolyFoundation)
-- (NSDate *)integralDate;
+@property (nonatomic,readonly) NSDate *integralDate;
 
 - (BOOL)isBeforeDate:(NSDate *)date;
 - (BOOL)isAfterDate:(NSDate *)date;
 
-- (BOOL)isBeforeNow;
-- (BOOL)isAfterNow;
+@property (nonatomic,readonly) BOOL isBeforeNow;
+@property (nonatomic,readonly) BOOL isAfterNow;
 
-- (BOOL)isInFuture;
-- (BOOL)isInPast;
+@property (nonatomic,readonly) BOOL isFuture;
+@property (nonatomic,readonly) BOOL isPast;
 @end

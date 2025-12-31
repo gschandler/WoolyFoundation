@@ -11,12 +11,12 @@
 @implementation NSNumber (WoolyFoundation)
 + (NSNumber *)numberWithBoolYES
 {
-	return [NSNumber numberWithBool:YES];
+	return @YES;
 }
 
 + (NSNumber *)numberWithBoolNO
 {
-	return [NSNumber numberWithBool:NO];
+	return @NO;
 }
 
 @end

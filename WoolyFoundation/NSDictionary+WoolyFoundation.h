@@ -27,11 +27,19 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (WoolyFoundation)
+@property (nonatomic,readonly) BOOL hasObjects;
 - (BOOL)containsKey:(id)key;
+#if NS_BLOCKS_AVAILABLE
+- (NSDictionary *)wbs_filter:(BOOL (^)(id key, id obj))predicate;
+#endif
 @end
 
 
 @interface NSMutableDictionary (WoolyFoundation)
 // removes object and all associated keys
 - (void)removeObject:(id)object;
+#if NS_BLOCKS_AVAILABLE
+- (void)wbs_filter:(BOOL (^)(id key, id obj))predicate;
+#endif
 @end
+

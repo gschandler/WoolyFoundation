@@ -27,9 +27,10 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSString(WoolyFoundation)
+@interface NSString (WoolyFoundation)
+@property (nonatomic,readonly) BOOL hasText;
+@property (nonatomic,readonly) unichar firstCharacter;
+@property (nonatomic,copy,readonly) NSString *substringWithFirstCharacter;
 
-- (unichar)firstCharacter;
-- (NSString *)substringWithFirstCharacter;
 - (NSComparisonResult)localizedCaseInsensitiveNumericCompare:(NSString *)other;
 @end

@@ -27,14 +27,14 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSArray(WoolyFoundation)
-- (BOOL)isEmpty;
+@interface NSArray (WoolyFoundation)
+@property (nonatomic, readonly) BOOL hasObjects;
 
 // convenient way to get next/previous object. Very inefficient, do not use to iterate an array.
-- (id)nextObject:(id)object;
-- (id)previousObject:(id)object;
+- (id)nextObjectAfter:(id)object;
+- (id)previousObjectBefore:(id)object;
 
-- (NSArray *)reversedArray;
+@property (nonatomic, copy, readonly) NSArray *reversedArray;
 
 - (BOOL)validIndex:(NSInteger)index;
 
@@ -43,11 +43,12 @@
 #if NS_BLOCKS_AVAILABLE
 - (NSArray *)wb_filter:(BOOL (^)(id))block;
 - (NSArray *)wb_map:(id (^)(id))block;
+- (NSArray *)wb_compactMap:(id (^)(id))block;
 - (id)wb_reduce:(id)initialValue apply:(id (^)(id, id))block;
 #endif
 @end
 
-@interface NSMutableArray(WoolyFoundation)
+@interface NSMutableArray (WoolyFoundation)
 
 // quick add methods
 - (void)prependObject:(id)object;

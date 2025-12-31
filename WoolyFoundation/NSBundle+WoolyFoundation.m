@@ -29,7 +29,7 @@
 static NSString * const	kCFBundleShortVersionString = @"CFBundleShortVersionString";
 static NSString * const	kCFBundleGetInfoString = @"CFBundleGetInfoString";
 
-@implementation NSBundle(WoolyFoundation)
+@implementation NSBundle (WoolyFoundation)
 - (NSString *)shortVersionString
 {
 	return [self objectForInfoDictionaryKey:kCFBundleShortVersionString];

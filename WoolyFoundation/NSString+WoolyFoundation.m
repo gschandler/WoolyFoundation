@@ -28,22 +28,27 @@
 
 
 @implementation NSString(WoolyFoundation)
+- (BOOL)hasText
+{
+    return self.length > 0;
+}
 
 - (unichar)firstCharacter
 {
 	unichar c = 0;
-	if ( self.length > 0 )
-		c = [self characterAtIndex:0];
+    if ( self.hasText ) {
+        c = [self characterAtIndex:0];
+    }
 	return c;
 }
 
 - (NSString *)substringWithFirstCharacter
 {
-	NSString * s = nil;
 	unichar c = [self firstCharacter];
-	if ( c != 0 ) {
-		s = [NSString stringWithCharacters:&c length:1];
-	}
+    if ( c == 0 ) {
+        return nil;
+    }
+    NSString *s = [NSString stringWithCharacters:&c length:1];
 	return s;
 }
 
@@ -55,3 +60,4 @@
 				  locale:[NSLocale currentLocale]];
 }
 @end
+

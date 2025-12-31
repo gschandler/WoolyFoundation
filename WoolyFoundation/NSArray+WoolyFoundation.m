@@ -27,13 +27,13 @@
 #import "NSArray+WoolyFoundation.h"
 #import <objc/message.h>
 
-@implementation NSArray(WoolyFoundation)
-- (BOOL)isEmpty
+@implementation NSArray (WoolyFoundation)
+- (BOOL)hasObjects
 {
-	return self.count == 0;
+    return self.count > 0;
 }
 
-- (id)nextObject:(id)object
+- (id)nextObjectAfter:(id)object
 {
 	id newObject = nil;
 	if ( object != nil ) {
@@ -46,16 +46,16 @@
 	return newObject;
 }
 
-- (id)previousObject:(id)object
+- (id)previousObjectBefore:(id)object
 {
+    if ( object == nil ) {
+        return nil;
+    }
 	id newObject = nil;
-	if ( object != nil ) {
-		
-		NSInteger index = [self indexOfObject:object];
-		if ( index != NSNotFound && index-- > 0 ) {
-			newObject = [self objectAtIndex:index];
-		}
-	}
+    NSInteger index = [self indexOfObject:object];
+    if ( index != NSNotFound && index-- > 0 ) {
+        newObject = [self objectAtIndex:index];
+    }
 	return newObject;
 }
 
@@ -88,24 +88,40 @@
 			}
 		}
 	}
-	return result;
+	return [result copy];
 }
 
 - (NSArray *)wb_map:(id (^)(id))block
 {
+    if ( !block ) {
+        return self;
+    }
 	NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
-	if ( block ) {
-		for ( id obj in self ) {
-			id value = block(obj);
-			if ( !value ) {
-				[NSException raise:NSInternalInconsistencyException format:@"Invalid return value from the block (nil)"];
-			}
-			else {
-				[result addObject:value];
-			}
-		}
-	}
-	return result;
+    for ( id obj in self ) {
+        id value = block(obj);
+        if ( !value ) {
+            [NSException raise:NSInternalInconsistencyException format:@"Invalid return value from the block (nil)"];
+        }
+        else {
+            [result addObject:value];
+        }
+    }
+	return [result copy];
+}
+
+- (NSArray *)wb_compactMap:(id _Nullable (^)(id obj))block
+{
+    if (!block) {
+        return self;
+    }
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
+    for (id obj in self) {
+        id value = block(obj);
+        if (value) {
+            [result addObject:value];
+        }
+    }
+    return [result copy];
 }
 
 - (id)wb_reduce:(id)initialValue apply:(id (^)(id, id))block
@@ -120,13 +136,13 @@
 }
 
 
-#endif
+#endif // NS_BLOCKS_AVAILABLE
 
 @end
 
 
 
-@implementation NSMutableArray(WoolyFoundation)
+@implementation NSMutableArray (WoolyFoundation)
 - (void)prependObject:(id)object
 {
 	NSParameterAssert(object);
@@ -175,8 +191,9 @@
 	if ( object && comparator ) {
 		NSInteger left = 0, right = [self count]-1, index = right/2;
 		IMP objectAtIndexImp = [self methodForSelector:@selector(objectAtIndex:)];
+		id (*objectAtIndexFP)(id,SEL,NSUInteger) = (id (*)(id,SEL,NSUInteger))objectAtIndexImp;
 		while ( left <= right ) {
-			id other = objectAtIndexImp(self,@selector(objectAtIndex:),index);
+			id other = objectAtIndexFP(self,@selector(objectAtIndex:),index);
 			
 			NSComparisonResult result = (NSComparisonResult)comparator(object,other,context);
 			//			NSComparisonResult result = (NSComparisonResult)[object performSelector:selector withObject:other];
@@ -199,7 +216,8 @@
 
 static NSInteger SelectorComparator( id obj1, id obj2, void *context )
 {
-	return (NSInteger)objc_msgSend( obj1, (SEL)context, obj2 );
+	NSInteger (*comparator)(id,SEL,id) = (NSInteger (*)(id,SEL,id))objc_msgSend;
+	return comparator( obj1, (SEL)context, obj2 );
 }
 
 -(void)addObject:(id)object sortedUsingSelector:(SEL)selector
@@ -224,10 +242,12 @@ static NSInteger SelectorComparator( id obj1, id obj2, void *context )
 		
 		IMP objectAtIndexImp = [self methodForSelector:@selector(objectAtIndex:)];
 		IMP	compareObjectToObjectImp = [descriptor methodForSelector:@selector(compareObject:toObject:)];
+		NSComparisonResult (*compareObjectToObjectFP)(NSSortDescriptor *,SEL,id,id) = (NSComparisonResult (*)(NSSortDescriptor *,SEL,id,id))compareObjectToObjectImp;
 
 		while (descriptor && left <= right ) {
-			id other = objectAtIndexImp(self,@selector(objectAtIndex:),index);
-			NSComparisonResult result = (NSComparisonResult)compareObjectToObjectImp(descriptor,@selector(compareObject:toObject:),object,other);//  [descriptor compareObject:object toObject:other];
+			id (*objectAtIndexFP)(id,SEL,NSUInteger) = (id (*)(id,SEL,NSUInteger))objectAtIndexImp;
+			id other = objectAtIndexFP(self,@selector(objectAtIndex:),index);
+			NSComparisonResult result = (NSComparisonResult)compareObjectToObjectFP(descriptor,@selector(compareObject:toObject:),object,other);//  [descriptor compareObject:object toObject:other];
 			
 			if ( result == NSOrderedAscending )	{		// left < right
 				right = index - 1;
@@ -250,7 +270,7 @@ static NSInteger SelectorComparator( id obj1, id obj2, void *context )
 
 - (void)removeFirstObject
 {
-    if ( self.count > 0 ) {
+    if ( self.hasObjects ) {
         [self removeObjectAtIndex:0];
     }
 }

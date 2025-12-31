@@ -29,6 +29,7 @@
 #import "WoolyMemory.h"
 
 @implementation NSCalendar (WoolyFoundation)
+
 - (NSDate *)dateByReplacingComponents:(NSDateComponents *)comps forCalendarUnits:(NSCalendarUnit)units toDate:(NSDate *)date
 {
 	NSParameterAssert(comps);
@@ -36,22 +37,22 @@
 	NSParameterAssert(date);
 	
 	NSDateComponents *dateComponents = [self components:units fromDate:date];
-	if ( units & NSYearCalendarUnit ) {
+	if ( units & NSCalendarUnitYear ) {
 		[dateComponents setYear:[comps year]-[dateComponents year]];
 	}
-	if ( units & NSMonthCalendarUnit ) {
+	if ( units & NSCalendarUnitMonth ) {
 		[dateComponents setMonth:[comps month]-[dateComponents month]];
 	}
-	if ( units & NSDayCalendarUnit ) {
+	if ( units & NSCalendarUnitDay ) {
 		[dateComponents setDay:[comps day]-[dateComponents day]];
 	}
-	if ( units & NSHourCalendarUnit ) {
+	if ( units & NSCalendarUnitHour ) {
 		[dateComponents setHour:[comps hour]-[dateComponents hour]];
 	}
-	if ( units & NSMinuteCalendarUnit ) {
+	if ( units & NSCalendarUnitMinute ) {
 		[dateComponents setMinute:[comps minute]-[dateComponents minute]];
 	}
-	if ( units & NSSecondCalendarUnit ) {
+	if ( units & NSCalendarUnitSecond ) {
 		[dateComponents setSecond:[comps second]-[dateComponents second]];
 	}
 	
@@ -82,7 +83,6 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = days;
 	NSDate *date = [self dateByAddingComponents:offset toDate:today options:0];
-	WBRelease(offset);
 	return date;
 }
 
@@ -115,7 +115,7 @@
 {
 	if ( date == nil || other == nil ) return NO;
 	
-	NSCalendarUnit units = NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit;
+	NSCalendarUnit units = NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay;
 	NSDateComponents *components = [self components:units
 										   fromDate:[self startOfDayFromDate:date]
 											 toDate:[self startOfDayFromDate:other]
@@ -128,7 +128,6 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.hour = 1;
 	date = [self dateByAddingComponents:offset toDate:date options:0];
-	WBRelease(offset);
 	return date;
 }
 
@@ -137,18 +136,16 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.hour = -1;
 	date = [self dateByAddingComponents:offset toDate:date options:0];
-	WBRelease(offset);
 	return date;
 }
 
 - (NSDate *)thisHourFromDate:(NSDate *)date
 {
-	NSCalendarUnit units = NSMinuteCalendarUnit|NSSecondCalendarUnit;
+	NSCalendarUnit units = NSCalendarUnitMinute|NSCalendarUnitSecond;
 	NSDateComponents *components = [self components:units fromDate:date];
 	[components setMinute:-[components minute]];
 	[components setSecond:-[components second]];
-	return [self dateByAddingComponents:units toDate:date options:0];
-	
+	return [self dateByAddingComponents:components toDate:date options:0];
 }
 
 - (NSDate *)previousHourFromDate:(NSDate *)date
@@ -166,7 +163,6 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = 1;
 	date = [self dateByAddingComponents:offset toDate:date options:0];
-	WBRelease(offset);
 	return date;
 }
 
@@ -175,7 +171,6 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.day = -1;
 	date = [self dateByAddingComponents:offset toDate:date options:0];
-	WBRelease(offset);
 	return date;
 }
 
@@ -199,7 +194,6 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.weekOfYear = 1;
 	date = [self dateByAddingComponents:offset toDate:date options:0];
-	WBRelease(offset);
 	return date;
 }
 
@@ -208,20 +202,18 @@
 	NSDateComponents *offset = [NSDateComponents new];
 	offset.weekOfYear = -1;
 	date = [self dateByAddingComponents:offset toDate:date options:0];
-	WBRelease(offset);
 	return date;
 }
 
 - (NSDate *)thisWeekFromDate:(NSDate *)date
 {
-	NSCalendarUnit units = NSSecondCalendarUnit|NSMinuteCalendarUnit|NSHourCalendarUnit|NSDayCalendarUnit;
+	NSCalendarUnit units = NSCalendarUnitSecond|NSCalendarUnitMinute|NSCalendarUnitHour|NSCalendarUnitDay;
 	NSDateComponents *components = [self components:units fromDate:date];
 	[components setSecond:-[components second]];
 	[components setMinute:-[components minute]];
 	[components setHour:-[components hour]];
 	[components setDay:-[components day]];
-	return [self dateByAddingComponents:units toDate:date options:0];
-	
+	return [self dateByAddingComponents:components toDate:date options:0];
 }
 
 - (NSDate *)previousWeekFromDate:(NSDate *)date
@@ -237,7 +229,7 @@
 - (NSDate *)startOfDayFromDate:(NSDate *)date
 {
 	date = [date integralDate];
-	NSCalendarUnit units = NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit;
+	NSCalendarUnit units = NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond;
 	NSDateComponents *components = [self components:units fromDate:date];
 	if ( components.hour > 0 || components.minute > 0 || components.second > 0 ) {
 		// roll backward
@@ -252,7 +244,7 @@
 - (NSDate *)endOfDayFromDate:(NSDate *)date
 {
 	date = [date integralDate];
-	NSCalendarUnit units = NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit;
+	NSCalendarUnit units = NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond;
 	NSDateComponents *components = [self components:units fromDate:date];
 	// roll forward to beginning of next day
 	[components setHour:-[components hour]];
@@ -280,26 +272,27 @@
 
 - (void)setValue:(NSInteger)value forCalendarUnit:(NSCalendarUnit)unit
 {
-	NSParameterAssert(unit&(NSSecondCalendarUnit+NSMinuteCalendarUnit+NSHourCalendarUnit+NSDayCalendarUnit+NSMonthCalendarUnit+NSYearCalendarUnit));
+	NSParameterAssert(unit&(NSCalendarUnitSecond+NSCalendarUnitMinute+NSCalendarUnitHour+NSCalendarUnitDay+NSCalendarUnitMonth+NSCalendarUnitYear));
 
-	if ( NSSecondCalendarUnit & unit ) {
+	if ( NSCalendarUnitSecond & unit ) {
 		[self setSecond:value];
 	}
-	if ( NSMinuteCalendarUnit & unit ) {
+	if ( NSCalendarUnitMinute & unit ) {
 		[self setMinute:value];
 	}
-	if ( NSHourCalendarUnit & unit ) {
+	if ( NSCalendarUnitHour & unit ) {
 		[self setHour:value];
 	}
-	if ( NSDayCalendarUnit & unit ) {
+	if ( NSCalendarUnitDay & unit ) {
 		[self setDay:value];
 	}
-	if ( NSMonthCalendarUnit & unit ) {
+	if ( NSCalendarUnitMonth & unit ) {
 		[self setMonth:value];
 	}
-	if ( NSYearCalendarUnit & unit ) {
+	if ( NSCalendarUnitYear & unit ) {
 		[self setYear:value];
 	}
 }
 
 @end
+

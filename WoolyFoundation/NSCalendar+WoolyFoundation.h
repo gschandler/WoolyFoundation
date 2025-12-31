@@ -54,17 +54,17 @@
 - (NSDate *)endOfDayFromDate:(NSDate *)date;
 
 // yesterday
-- (NSDate *)yesterday;		// 00:00:00 yesterday
+@property (nonatomic,readonly) NSDate *yesterday;		// 00:00:00 yesterday
 - (BOOL)dateIsYesterday:(NSDate *)date;
 
 // today
-- (NSDate *)today;			// 00:00:00 today
+@property (nonatomic,readonly) NSDate *today;			// 00:00:00 today
 - (BOOL)dateIsBeforeToday:(NSDate *)date;
 - (BOOL)dateIsToday:(NSDate *)date;
 - (BOOL)dateIsAfterToday:(NSDate *)date;
 
 // tomorrow
-- (NSDate *)tomorrow;		// 00:00:00 tomorrow
+@property (nonatomic,readonly) NSDate *tomorrow;		// 00:00:00 tomorrow
 - (BOOL)dateIsTomorrow:(NSDate *)date;
 
 - (BOOL)date:(NSDate *)date isSameDayAsDate:(NSDate *)other;

@@ -27,9 +27,25 @@
 #import "NSDictionary+WoolyFoundation.h"
 
 @implementation NSDictionary (WoolyFoundation)
+
+- (NSDictionary *)wbs_filter:(BOOL (^)(id key, id obj))predicate
+{
+    NSParameterAssert(predicate);
+    if (!predicate) { return self; }
+
+    NSMutableDictionary *filtered = [[NSMutableDictionary alloc] initWithDictionary:self];
+    [filtered wbs_filter:predicate];
+    return [filtered copy];
+}
+
 - (BOOL)containsKey:(id)key
 {
 	return [self objectForKey:key] != nil;
+}
+
+- (BOOL)hasObjects
+{
+    return self.count > 0;
 }
 
 @end
@@ -47,4 +63,17 @@
 	}
 }
 
+- (void)wbs_filter:(BOOL (^)(id key, id obj))predicate
+{
+    NSParameterAssert(predicate);
+    if (!predicate) { return; }
+    
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if (!predicate(key, obj)) {
+            [self removeObjectForKey:key];
+        }
+    }];
+}
 @end
+
+

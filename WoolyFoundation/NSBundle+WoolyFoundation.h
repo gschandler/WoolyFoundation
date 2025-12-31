@@ -27,8 +27,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSBundle(WoolyFoundation)
-- (NSString *)shortVersionString;
-- (NSString *)bundleVersionString;
-- (NSString *)getInfoString;
+@interface NSBundle (WoolyFoundation)
+@property (nonatomic,copy,readonly) NSString *shortVersionString;
+@property (nonatomic,copy,readonly) NSString *bundleVersionString;
+@property (nonatomic,copy,readonly) NSString *getInfoString;
 @end

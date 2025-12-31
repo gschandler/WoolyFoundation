@@ -53,12 +53,12 @@
 	return [self isAfterDate:[NSDate date]];
 }
 
-- (BOOL)isInFuture
+- (BOOL)isFuture
 {
 	return [self isAfterNow];
 }
 
-- (BOOL)isInPast
+- (BOOL)isPast
 {
 	return [self isBeforeNow];
 }
