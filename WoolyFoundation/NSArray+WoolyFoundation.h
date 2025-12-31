@@ -27,14 +27,15 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSArray (WoolyFoundation)
-@property (nonatomic, readonly) BOOL hasObjects;
+@interface NSArray(WoolyFoundation)
+@property (nonatomic,readonly) BOOL hasObjects;
+@property (nonatomic,readonly,strong) id firstObject;
 
 // convenient way to get next/previous object. Very inefficient, do not use to iterate an array.
-- (id)nextObjectAfter:(id)object;
-- (id)previousObjectBefore:(id)object;
+- (id)nextObject:(id)object;
+- (id)previousObject:(id)object;
 
-@property (nonatomic, copy, readonly) NSArray *reversedArray;
+@property (nonatomic,readonly,copy) NSArray *reversedArray;
 
 - (BOOL)validIndex:(NSInteger)index;
 
@@ -67,6 +68,4 @@
 - (void)removeFirstObject;
 
 - (void)reverse;
-
-
 @end

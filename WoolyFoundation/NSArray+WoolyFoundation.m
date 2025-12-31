@@ -27,26 +27,32 @@
 #import "NSArray+WoolyFoundation.h"
 #import <objc/message.h>
 
-@implementation NSArray (WoolyFoundation)
-- (BOOL)hasObjects
+@implementation NSArray(WoolyFoundation)
+- (id)firstObject
 {
-    return self.count > 0;
+	id object = (self.count > 0) ? self[0] : nil;
+	return object;
 }
 
-- (id)nextObjectAfter:(id)object
+- (BOOL)hasObjects
+{
+	return self.count > 0;
+}
+
+- (id)nextObject:(id)object
 {
 	id newObject = nil;
 	if ( object != nil ) {
 
 		NSInteger index = [self indexOfObject:object];
 		if ( index != NSNotFound && ++index < [self count] ) {
-			newObject = [self objectAtIndex:index];
+			newObject = self[index];
 		}
 	}
 	return newObject;
 }
 
-- (id)previousObjectBefore:(id)object
+- (id)previousObject:(id)object
 {
     if ( object == nil ) {
         return nil;
@@ -282,5 +288,4 @@ static NSInteger SelectorComparator( id obj1, id obj2, void *context )
 		[self exchangeObjectAtIndex:left++ withObjectAtIndex:right--];
 	}
 }
-
 @end
